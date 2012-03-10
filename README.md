@@ -47,7 +47,7 @@ This will automatically create a new template file with a new uuid. Use the tab 
 
 If you want to modify existing templates, you can get the template files from this repository, edit them and put the modified files in the *"#Textastic/Templates"* folder. Textastic will pick up the changes immediately when you open the template selection view in the file creation dialog. 
 
-**If you do not change the uuid, your custom files will be used instead of the built-in ones.** This behavior is the same as for custom syntax definitions as explained [in the manual](http://www.textasticapp.com/v3/manual/lessons/How_can_I_add_my_own_syntax_definitions_and_themes.html).
+It is important that you do not change the uuid, so that your custom files will be used instead of the built-in ones with the same uuid. This behavior is the same as for custom syntax definitions as explained [in the manual](http://www.textasticapp.com/v4/manual/lessons/How_can_I_add_my_own_syntax_definitions__themes_and_templates.html).
 
 ## Code Completion
 
