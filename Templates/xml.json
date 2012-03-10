@@ -1,0 +1,12 @@
+{
+	"uuid": "08163C89-323B-45EF-BC9D-BFCD1052B9E0",
+	"category": "XML",
+	"templates": [
+		{
+			"name": "XML",
+			"fileExtension": "xml",
+			"snippet": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n$0"
+		}
+
+	]
+}

@@ -1,0 +1,36 @@
+{
+	"uuid": "74C6D420-A016-4659-AF92-B5CCC1AE53BB",
+	"category": "HTML",
+	"templates": [
+		{
+			"name": "HTML5",
+			"fileExtension": "html",
+			"snippet": "<!DOCTYPE HTML>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>${1:untitled}<\/title>\n<\/head>\n\n<body>$0\n<\/body>\n<\/html>"
+		},
+		{
+			"name": "XHTML 1.1",
+			"fileExtension": "html",
+			"snippet": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n<title>${1:untitled}</title>\n</head>\n\n<body>\n</body>\n</html>"
+		},
+		{
+			"name": "XHTML 1.0 Strict",
+			"fileExtension": "html",
+			"snippet": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n<title>${1:untitled}</title>\n</head>\n\n<body>$0\n</body>\n</html>"
+		},
+		{
+			"name": "XHTML 1.0 Transitional",
+			"fileExtension": "html",
+			"snippet": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n<title>${1:untitled}</title>\n</head>\n\n<body>$0\n</body>\n</html>"
+		},
+		{
+			"name": "HTML 4.01 Transitional",
+			"fileExtension": "html",
+			"snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n<title>${1:untitled}</title>\n</head>\n\n<body>$0\n</body>\n</html>"
+		},
+		{
+			"name": "HTML 4.01 Strict",
+			"fileExtension": "html",
+			"snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n<title>${1:untitled}</title>\n</head>\n\n<body>$0\n</body>\n</html>"
+		}
+	]
+}

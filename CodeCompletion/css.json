@@ -1,0 +1,286 @@
+{
+	"description": "Textastic Code Completion for CSS",
+	"uuid": "7918FCDA-429B-474B-919D-D352311D4274",
+
+	"completionSets": [
+		{
+			"name": "css.properties",
+			"defaultAppend": ": $0;",
+			"strings": [
+				"azimuth",
+				"background",
+				"background-attachment",
+				"background-clip",
+				"background-color",
+				"background-image",
+				"background-origin",
+				"background-position",
+				"background-position-x",
+				"background-position-y",
+				"background-repeat",
+				"background-size",
+				{
+					"string": "border",
+					"append": ": ${1:${2:1px} ${3:solid} ${4:#999}};"
+				},
+				{
+					"string": "border-bottom",
+					"append": ": ${1:${2:1px} ${3:solid} ${4:#999}};"
+				},
+				"border-bottom-color",
+				"border-bottom-style",
+				"border-bottom-width",
+				"border-collapse",
+				"border-color",
+				{
+					"string": "border-left",
+					"append": ": ${1:${2:1px} ${3:solid} ${4:#999}};"
+				},
+				"border-left-color",
+				"border-left-style",
+				"border-left-width",
+				{
+					"string": "border-right",
+					"append": ": ${1:${2:1px} ${3:solid} ${4:#999}};"
+				},
+				"border-right-color",
+				"border-right-style",
+				"border-right-width",
+				"border-spacing",
+				"border-style",
+				{
+					"string": "border-top",
+					"append": ": ${1:${2:1px} ${3:solid} ${4:#999}};"
+				},
+				"border-top-color",
+				"border-top-style",
+				"border-top-width",
+				"border-width",
+				"bottom",
+				"caption-side",
+				"clear",
+				"clip",
+				"color",
+				"content",
+				"counter-increment",
+				"counter-reset",
+				"cue",
+				"cue-after",
+				"cue-before",
+				"cursor",
+				"direction",
+				"display",
+				"elevation",
+				"empty-cells",
+				"float",
+				{
+					"string": "font",
+					"append": ": ${1:${2:bold} ${3:1em}${4:/1.5em} ${5:Verdana, Geneva, sans-serif}};"
+				},
+				"font-family",
+				"font-size",
+				"font-size-adjust",
+				"font-stretch",
+				"font-style",
+				"font-variant",
+				"font-weight",
+				"filter",
+				"height",
+				"image-orientation",
+				"left",
+				"letter-spacing",
+				"line-height",
+				"list-style",
+				"list-style-image",
+				"list-style-position",
+				"list-style-type",
+				"margin",
+				"margin-bottom",
+				"margin-left",
+				"margin-right",
+				"margin-top",
+				"marker-offset",
+				"max-height",
+				"max-width",
+				"min-height",
+				"min-width",
+				"opacity",
+				"orphans",
+				"outline",
+				"outline-color",
+				"outline-offset",
+				"outline-style",
+				"outline-width",
+				"overflow",
+				"overflow-x",
+				"overflow-y",
+				"padding",
+				"padding-bottom",
+				"padding-left",
+				"padding-right",
+				"padding-top",
+				"page",
+				"page-break-after",
+				"page-break-before",
+				"page-break-inside",
+				"pause",
+				"pause-after",
+				"pause-before",
+				"pitch",
+				"pitch-range",
+				"play-during",
+				"pointer-events",
+				"position",
+				"quotes",
+				"resize",
+				"richness",
+				"right",
+				"size",
+				"speak",
+				"speak-header",
+				"speak-numeral",
+				"speak-punctuation",
+				"speech-rate",
+				"src",
+				"stress",
+				"table-layout",
+				"text-align",
+				"text-decoration",
+				"text-indent",
+				"text-overflow",
+				"text-shadow",
+				"text-transform",
+				"top",
+				"unicode-bidi",
+				"unicode-range",
+				"vertical-align",
+				"visibility",
+				"voice-family",
+				"volume",
+				"white-space",
+				"widows",
+				"width",
+				"word-break",
+				"word-spacing",
+				"word-wrap",
+				"z-index",
+				"zoom"
+			]
+		},
+		{
+			"name": "css.properties.css3",
+			"defaultAppend": ": $0;",
+			"strings": [
+				// CSS3 specs; final recommendations, but may not be implemented in browsers yet
+
+				// http://www.w3.org/TR/css3-animations/
+				"animation",
+				"animation-delay",
+				"animation-direction",
+				"animation-duration",
+				"animation-fill-mode",
+				"animation-iteration-count",
+				"animation-name",
+				"animation-play-state",
+				"animation-timing-function",
+
+				// http://dev.w3.org/csswg/css3-3d-transforms/
+				"transform",
+				"transform-origin",
+				"transform-style",
+				"perspective-",
+				"perspective-origin",
+				"backface-visibility",
+
+				// http://www.w3.org/TR/css3-page/
+				"fit",
+				"fit-position",
+
+				// http://www.w3.org/TR/css3-ruby/ 
+				"ruby-position",
+				"ruby-align",
+				"ruby-overhang",
+				"ruby-span",
+
+				// http://www.w3.org/TR/css3-marquee/ 
+				"overflow-style",
+				"marquee-style",
+				"marquee-play-count",
+				"marquee-direction",
+				"marquee-speed",
+
+				// http://www.w3.org/TR/css3-ui/ 
+				"appearance",
+				"icon",
+				"box-sizing",
+				"nav-index",
+				"nav-up",
+				"nav-right",
+				"nav-down",
+				"nav-left",
+
+				// http://www.w3.org/TR/css3-multicol/ 
+				"column-width",
+				"column-count",
+				"columns",
+				"column-gap",
+				"column-rule-color",
+				"column-rule-style",
+				"column-rule-width",
+				"column-rule",
+				"break-before",
+				"break-after",
+				"break-inside",
+				"column-span",
+				"column-fill",
+
+				// http://www.w3.org/TR/css3-background/ 
+				"border-image-slice",
+				"border-image-source",
+				"border-image-width",
+				"border-image-outset",
+				"border-image-repeat",
+				{
+					"string": "border-image",
+					"append": ": ${1:${2:url('${3:../images/border.jpg}')} ${4:5 3 5 3} ${5:repeat stretch}};"
+				},
+				"border-bottom-right-radius",
+				"border-bottom-left-radius",
+				"border-top-right-radius",
+				"border-top-left-radius",
+				"border-radius",
+				{
+					"string": "box-shadow",
+					"append": ": ${1:${2:0px} ${3:3px} ${4:5px} ${5:#333}};"
+				},
+
+				// http://www.w3.org/TR/css3-flexbox/ 
+				"box-orient",
+				"box-direction",
+				"box-ordinal-group",
+				"box-align",
+				"box-flex",
+				"box-flex-group",
+				"box-pack",
+				"box-lines",
+
+				// http://www.w3.org/TR/WD-font/ 
+				"font-smooth"
+			]
+		}
+	],
+
+	"contexts": [
+		{
+			"description": "CSS Property Completion",
+			"scope": "source.css meta.property-list.css",
+			"pattern": "(?<!:)(?:^|\\s|;)([a-zA-Z-]+)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"css.properties",
+				"css.properties.css3"
+			]
+		}
+
+	]
+}

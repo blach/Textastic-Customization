@@ -1,0 +1,1192 @@
+{
+	"description": "Textastic Code Completion for HTML Tags and Attributes",
+	"uuid": "928A838C-F861-4902-92B8-58C29FCFC077",
+
+	"completionSets": [
+		{
+			"name": "html.tags.with-newline",
+			"defaultAppend": ">\n$0\n</$COMPLETION>",
+			"strings": [
+				"html",
+				"body",
+				"head"
+			]
+		},
+		{
+			"name": "html.tags",
+			"defaultAppend": ">$0</$COMPLETION>",
+			"strings": [
+				{
+					"string": "a",
+					"append": " href=\"$1\">$2</a>$0"
+				},
+				{
+					"string": "script",
+					"append": " src=\"$1\" type=\"text/javascript\"></script>$0"
+				},
+				{
+					"string": "form",
+					"append": " method=\"${1:post}\" action=\"$2\">$0</form>"
+				},
+				{
+					"string": "label",
+					"append": "${1: for=\"$2\"}>$0</label>"
+				},
+				{
+					"string": "span",
+					"append": "${1: class=\"$2\"}>$0</span>"
+				},
+				{
+					"string": "div",
+					"append": "${1: id=\"$2\"}>$0</div>"
+				},
+				{
+					"string": "canvas",
+					"append": " id=\"${1:canvas-id}\" width=\"${2:0}\" height=\"${3:0}\">$0</canvas>"
+				},
+				"abbr",
+				"acronym",
+				"address",
+				"applet",
+				"area",
+				"b",
+				"base",
+				"bdo",
+				"blockquote",
+				"button",
+				"caption",
+				"center",
+				"cite",
+				"code",
+				"colgroup",
+				"dd",
+				"del",
+				"dfn",
+				"dir",
+				"dl",
+				"dt",
+				"em",
+				"fieldset",
+				"frame",
+				"frameset",
+				"h1",
+				"h2",
+				"h3",
+				"h4",
+				"h5",
+				"h6",
+				"hr",
+				"i",
+				"iframe",
+				"ins",
+				"kdb",
+				"legend",
+				"li",
+				"map",
+				"menu",
+				"noframes",
+				"noscript",
+				"object",
+				"ol",
+				"optgroup",
+				"option",
+				"p",
+				"param",
+				"pre",
+				"q",
+				"samp",
+				"select",
+				"small",
+				"strike",
+				"strong",
+				"style",
+				"sub",
+				"sup",
+				"table",
+				"tbody",
+				"td",
+				"textarea",
+				"tfoot",
+				"th",
+				"thead",
+				"title",
+				"tr",
+				"tt",
+				"u",
+				"ul",
+				"var"
+			]
+		},
+		{
+			"name": "html.tags.html5",
+			"defaultAppend": ">$0</$COMPLETION>",
+			"strings": [
+				"article",
+				"aside",
+				{
+					"string": "audio",
+					"append": " src=\"$1\"${2: preload=\"${3:none}\"}${4: controls}>$0</audio>"
+				},
+				"bdi",
+				"command",
+				"datalist",
+				"details",
+				"embed",
+				"figcaption",
+				"figure",
+				"footer",
+				"header",
+				"hgroup",
+				"keygen",
+				"mark",
+				"meter",
+				"nav",
+				"output",
+				"progress",
+				"rp",
+				"rt",
+				"ruby",
+				"samp",
+				"section",
+				{
+					"string": "source",
+					"append": " src=\"$1\" type=\"$2\" />$0"
+				},
+				"summary",
+				"time",
+				"track",
+				{
+					"string": "video",
+					"append": " src=\"$1\"${2: preload=\"${3:none}\"}${4: controls}>$0</video>"
+				}
+			]
+		},
+		{
+			"name": "html.tags.self-closing",
+			"defaultAppend": " />",
+			"strings": [
+				{
+					"string": "img",
+					"append": " src=\"$1\" $2/>$0"
+				},
+				{
+					"string": "meta",
+					"append": "${1: http-equiv=\"$2\" content=\"$3\"} />"
+				},
+				{
+					"string": "link",
+					"append": " rel=\"$1\" href=\"$2\" type=\"$3\" $4/>$0"
+				},
+				{
+					"string": "input",
+					"append": " type=\"$1\" name=\"$2\" value=\"$3\" />$0"
+				},
+				"br",
+				"col",
+				"wbr"
+			]
+		},
+		
+		// Global attributes
+		{
+			"name": "html.tags.standard-attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"accesskey",
+				"class",
+				"id",
+				"style",
+				"tabindex",
+				"title"
+			]
+		},
+		{
+			"name": "html.tags.event-attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"onfocus",
+				"onblur",
+				"onclick",
+				"ondblclick",
+				"onmousedown",
+				"onmouseup",
+				"onmouseover",
+				"onmousemove",
+				"onmouseout",
+				"onkeypress",
+				"onkeydown",
+				"onkeyup"
+			]
+		},
+		
+		// Attributes of specific tags	
+		{
+			"name": "html.tags.a.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"href",
+				"hreflang",
+				"name",
+				"rel",
+				"target",
+				// HTML5
+				"media",
+				"ping",
+				"type"
+			]
+		},
+		{
+			"name": "html.tags.applet.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"height",
+				"width",
+				"align",
+				"alt",
+				"archive",
+				"code",
+				"codebase",
+				"hspace",
+				"name",
+				"object",
+				"vspace"
+			]
+		},	
+		{
+			"name": "html.tags.area.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"alt",
+				"coords",
+				"href",
+				"nohref",
+				"shape",
+				"target",
+				// HTML5
+				"ping",
+				"rel",
+				"media",
+				"hreflang",
+				"type"
+			]
+		},
+	
+		// HTML5
+		{
+			"name": "html.tags.audio.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"src",
+				"preload",
+				"autoplay",
+				"controls",
+				"loop"
+			]
+		},
+	
+		{
+			"name": "html.tags.base.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"href",
+				"target"
+			]
+		},
+	
+		{
+			"name": "html.tags.bdo.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"dir"
+			]
+		},
+	
+		{
+			"name": "html.tags.blockquote.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"cite"
+			]
+		},
+	
+		{
+			"name": "html.tags.button.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"disabled",
+				"name",
+				"type",
+				"value",
+				// HTML5
+				"autofocus",
+				"form",
+				"formaction",
+				"formenctype",
+				"formmethod",
+				"formnovalidate",
+				"formtarget"
+			]
+		},
+	
+		{
+			"name": "html.tags.canvas.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"width",
+				"height"
+			]
+		},
+	
+		{
+			"name": "html.tags.col.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"align",
+				"char",
+				"charoff",
+				"span",
+				"valign",
+				"width"
+			]
+		},
+	
+		{
+			"name": "html.tags.colgroup.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"align",
+				"char",
+				"charoff",
+				"span",
+				"valign",
+				"width"
+			]
+		},
+	
+		// HTML5
+		{
+			"name": "html.tags.command.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"type",
+				"label",
+				"icon",
+				"disabled",
+				"checked",
+				"radiogroup"
+			]
+		},
+	
+		{
+			"name": "html.tags.del.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"cite",
+				"datetime"
+			]
+		},
+	
+		// HTML5
+		{
+			"name": "html.tags.details.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"open"
+			]
+		},
+	
+		// HTML5
+		{
+			"name": "html.tags.device.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"type"
+			]
+		},
+	
+		{
+			"name": "html.tags.dir.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"compact"
+			]
+		},
+	
+		// HTML5
+		{
+			"name": "html.tags.embed.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"src",
+				"type",
+				"width",
+				"height"
+			]
+		},
+	
+		// HTML5
+		{
+			"name": "html.tags.fieldset.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"disabled",
+				"form",
+				"name"
+			]
+		},
+	
+		// HTML5
+		{
+			"name": "html.tags.form.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"accept-charset",
+				"action",
+				"autocomplete",
+				"enctype",
+				"method",
+				"name",
+				"novalidate",
+				"target"
+			]
+		},
+	
+		{
+			"name": "html.tags.frame.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"frameborder",
+				"longdesc",
+				"marginheight",
+				"marginwidth",
+				"name",
+				"noresize",
+				"scrolling",
+				"src"
+			]
+		},
+	
+		{
+			"name": "html.tags.frameset.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"cols",
+				"rows"
+			]
+		},
+	
+		{
+			"name": "html.tags.head.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"profile"
+			]
+		},
+	
+		{
+			"name": "html.tags.html.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"xmlns",
+				// HTML5
+				"manifest"
+			]
+		},
+	
+		{
+			"name": "html.tags.iframe.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"align",
+				"frameborder",
+				"longdesc",
+				"marginheight",
+				"marginwidth",
+				"name",
+				"noresize",
+				"scrolling",
+				"src",
+				"width",
+				"height",
+				// HTML5
+				"srcdoc",
+				"sandbox",
+				"seamless"
+			]
+		},
+	
+		{
+			"name": "html.tags.img.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"alt",
+				"src",
+				"height",
+				"width",
+				"usemap",
+				"longdesc",
+				// HTML5
+				"ismap"
+			]
+		},
+	
+		{
+			"name": "html.tags.input.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"accept",
+				"alt",
+				"checked",
+				"disabled",
+				"maxlength",
+				"name",
+				"readonly",
+				"size",
+				"src",
+				"type",
+				"value",
+				// HTML5
+				"autocomplete",
+				"autofocus",
+				"form",
+				"formaction",
+				"formenctype",
+				"formmethod",
+				"formnovalidate",
+				"formtarget",
+				"height",
+				"list",
+				"max",
+				"min",
+				"multiple",
+				"pattern",
+				"placeholder",
+				"required",
+				"step",
+				"width"
+			]
+		},
+	
+		{
+			"name": "html.tags.ins.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"cite",
+				"datetime"
+			]
+		},
+	
+			// HTML5
+		{
+			"name": "html.tags.keygen.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"autofocus",
+				"challenge",
+				"disabled",
+				"form",
+				"keytype",
+				"name"
+			]
+		},
+	
+		{
+			"name": "html.tags.label.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"for",
+				// HTML5
+				"form"
+			]
+		},
+	
+			// HTML5
+		{
+			"name": "html.tags.li.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"value"
+			]
+		},
+	
+		{
+			"name": "html.tags.link.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"charset",
+				"href",
+				"hreflang",
+				"media",
+				"rel",
+				"rev",
+				"target",
+				"type",
+				// HTML5
+				"sizes"
+			]
+		},
+	
+		{
+			"name": "html.tags.map.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"name"
+			]
+		},
+	
+		// HTML5
+		{
+			"name": "html.tags.menu.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"label",
+				"type"
+			]
+		},
+	
+		{
+			"name": "html.tags.meta.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"http-equiv",
+				"content",
+				"name",
+				"scheme",
+				// HTML5
+				"charset"
+			]
+		},
+	
+		// HTML5
+		{
+			"name": "html.tags.meter.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"form",
+				"high",
+				"low",
+				"max",
+				"min",
+				"optimum",
+				"value"
+			]
+		},
+	
+		{
+			"name": "html.tags.object.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"align",
+				"archive",
+				"border",
+				"classid",
+				"codebase",
+				"codetype",
+				"data",
+				"declare",
+				"height",
+				"name",
+				"standby",
+				"type",
+				"usemap",
+				"width"
+			]
+		},
+	
+		// HTML5
+		{
+			"name": "html.tags.ol.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"reversed",
+				"start"
+			]
+		},
+	
+		{
+			"name": "html.tags.optgroup.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"label",
+				"disabled"
+			]
+		},
+	
+		{
+			"name": "html.tags.option.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"disabled",
+				"label",
+				"selected",
+				"value"
+			]
+		},
+	
+		// HTML5
+		{
+			"name": "html.tags.output.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"for",
+				"form",
+				"name"
+			]
+		},
+	
+		{
+			"name": "html.tags.param.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"name",
+				"type",
+				"value",
+				"valuetype"
+			]
+		},
+	
+		// HTML5
+		{
+			"name": "html.tags.progress.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"max",
+				"value"
+			]
+		},
+	
+		{
+			"name": "html.tags.q.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"cite"
+			]
+		},
+	
+		{
+			"name": "html.tags.script.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"type",
+				"charset",
+				"defer",
+				"language",
+				"src",
+				// HTML5
+				"async"
+			]
+		},
+	
+		{
+			"name": "html.tags.select.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"disabled",
+				"multiple",
+				"name",
+				"size",
+				// HTML5
+				"autofocus",
+				"form"
+			]
+		},
+	
+		// HTML5
+		{
+			"name": "html.tags.source.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"media",
+				"src",
+				"type"
+			]
+		},
+	
+		{
+			"name": "html.tags.style.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"type",
+				"media",
+				// HTML5
+				"scoped",
+				"title"
+			]
+		},
+	
+		{
+			"name": "html.tags.table.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"border",
+				"cellpadding",
+				"cellspacing",
+				"height",
+				"frame",
+				"rules",
+				"summary",
+				"width"
+			]
+		},
+	
+		{
+			"name": "html.tags.tbody.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"char",
+				"charoff",
+				"valign"
+			]
+		},
+	
+		{
+			"name": "html.tags.td.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"abbr",
+				"align",
+				"axis",
+				"char",
+				"charoff",
+				"colspan",
+				"headers",
+				"height",
+				"rowspan",
+				"scope",
+				"valign",
+				"width"
+			]
+		},
+	
+		{
+			"name": "html.tags.textarea.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"cols",
+				"rows",
+				"disabled",
+				"name",
+				"readonly",
+				// HTML5
+				"autofocus",
+				"form",
+				"maxlength",
+				"placeholder",
+				"required",
+				"wrap"
+			]
+		},
+	
+		{
+			"name": "html.tags.tfoot.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"char",
+				"charoff",
+				"valign"
+			]
+		},
+	
+		{
+			"name": "html.tags.th.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"abbr",
+				"axis",
+				"char",
+				"charoff",
+				"colspan",
+				"headers",
+				"height",
+				"rowspan",
+				"scope",
+				"valign",
+				"width"
+			]
+		},
+	
+		{
+			"name": "html.tags.thead.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"char",
+				"charoff",
+				"valign"
+			]
+		},
+	
+		// HTML5
+		{
+			"name": "html.tags.time.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"datetime",
+				{
+					"string": "pubdate",
+					"append": ""
+				}
+			]
+		},
+	
+		{
+			"name": "html.tags.tr.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"char",
+				"charoff",
+				"valign"
+			]
+		},
+	
+		// HTML5
+		{
+			"name": "html.tags.track.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"kind",
+				"label",
+				"src",
+				"srclang"
+			]
+		},
+	
+		// HTML5
+		{
+			"name": "html.tags.video.attributes",
+			"defaultAppend": "=\"$1\"$0",
+			"strings": [
+				"autoplay",
+				"controls",
+				"height",
+				"loop",
+				"poster",
+				"preload",
+				"src",
+				"width"
+			]
+		},
+		
+		// Attribute values
+		// Generic attribute completions
+		{
+			"name": "html.tags.alltags.attributes.href.attribute-values",
+			"strings": [
+				"../",
+				"../../",
+				"http://",
+				"https://"
+			]
+		},
+	
+		{
+			"name": "html.tags.alltags.attributes.src.attribute-values",
+			"strings": [
+				"../",
+				"../../",
+				"http://",
+				"https://"
+			]
+		},
+			
+		//  Tag-specific attribute completions 
+		{
+			"name": "html.tags.input.attributes.type.attribute-values",
+			"strings": [
+				"button",
+				"checkbox",
+				"file",
+				"hidden",
+				"image",
+				"password",
+				"radio",
+				"reset",
+				"submit",
+				"text",
+				// HTML 5 
+				"color",
+				"date",
+				"datetime",
+				"datetime-local",
+				"email",
+				"month",
+				"number",
+				"range",
+				"search",
+				"tel",
+				"time",
+				"url",
+				"week"
+			]
+		},
+		{
+			"name": "html.tags.link.attributes.media.attribute-values",
+			"strings": [
+				"all",
+				"aura",
+				"braille",
+				"handheld",
+				"print",
+				"projection",
+				"screen",
+				"tty",
+				"tv"
+			]
+		},
+		{
+			"name": "html.tags.a.attributes.rel.attribute-values",
+			"strings": [
+				"alternate",
+				"appendix",
+				"archives",
+				"author",
+				"bookmark",
+				"chapter",
+				"contents",
+				"copyright",
+				"external",
+				"first",
+				"glossary",
+				"help",
+				"index",
+				"last",
+				"license",
+				"next",
+				"nofollow",
+				"noreferrer",
+				"prev",
+				"search",
+				"section",
+				"sidebar",
+				"start",
+				"subsection",
+				"tag",
+				"up"
+			]
+		},
+		{
+			"name": "html.tags.a.attributes.target.attribute-values",
+			"strings": [
+				"_blank",
+				"_parent",
+				"_self",
+				"_top"
+			]
+		},
+		{
+			"name": "html.tags.area.attributes.rel.attribute-values",
+			"strings": [
+				"alternate",
+				"appendix",
+				"archives",
+				"author",
+				"bookmark",
+				"chapter",
+				"contents",
+				"copyright",
+				"external",
+				"first",
+				"glossary",
+				"help",
+				"index",
+				"last",
+				"license",
+				"next",
+				"nofollow",
+				"noreferrer",
+				"prev",
+				"search",
+				"section",
+				"sidebar",
+				"start",
+				"subsection",
+				"tag",
+				"up"
+			]
+		},
+		{
+			"name": "html.tags.link.attributes.rel.attribute-values",
+			"strings": [
+				"alternate",
+				"appendix",
+				"archives",
+				"author",
+				"bookmark",
+				"chapter",
+				"contents",
+				"copyright",
+				"first",
+				"glossary",
+				"help",
+				"icon",
+				"index",
+				"last",
+				"license",
+				"next",
+				"pingback",
+				"prefetch",
+				"prev",
+				"search",
+				"section",
+				"start",
+				"stylesheet",
+				"sidebar",
+				"subsection",
+				"tag",
+				"up"
+			]
+		},
+		// HTML 5 audio/video
+		{
+			"name": "html.tags.audio.attributes.preload.attribute-values",
+			"strings": [
+				"auto",
+				"metadata",
+				"none"
+			]
+		},
+		{
+			"name": "html.tags.video.attributes.preload.attribute-values",
+			"strings": [
+				"auto",
+				"metadata",
+				"none"
+			]
+		}
+	],
+
+	"contexts": [
+		{
+			"description": "HTML Tag Completion",
+			"scope": "text.html - source - comment - string",
+			"pattern": "<([a-zA-Z0-9]*)(?!/)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"html.tags.with-newline",
+				"html.tags",
+				"html.tags.self-closing",
+				"html.tags.html5"
+			]
+		},
+		{
+			"description": "HTML Attribute Completion",
+			"scope": "text.html meta.tag",
+			"pattern": "<([a-zA-Z0-9]*)(?:\\s+[a-zA-Z0-9-:_]+\\s*=\\s*(?:'.*'|\".*\"))*(?:(?:\\s([a-zA-Z0-9-]+))|\\s)",
+			"completionCaptureIndex": 2,
+			"completionSetNames": [
+				"html.tags.$1.attributes",
+				"html.tags.standard-attributes",
+				"html.tags.event-attributes"
+			]
+		},
+		{
+			"description": "HTML Attribute Values Completion",
+			"scope": "text.html meta.tag string.quoted",
+			"pattern": "<([a-zA-Z0-9]*)(?:\\s+[a-zA-Z0-9-:_]+\\s*=\\s*(?:'.*'|\".*\"))*(?:\\s([a-zA-Z0-9-]+)\\s*=\\s*(?:[\"'])([a-zA-Z0-9-]*))",
+			"completionCaptureIndex": 3,
+			"completionSetNames": [
+				"html.tags.alltags.attributes.$2.attribute-values",
+				"html.tags.$1.attributes.$2.attribute-values"
+			]
+		}
+	]
+}

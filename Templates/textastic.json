@@ -1,0 +1,11 @@
+{
+	"uuid": "D2701A4E-042C-43DB-8F41-060E980BE75B",
+	"category": "Textastic",
+	"templates": [
+		{
+			"name": "Template",
+			"fileExtension": "json",
+			"snippet": "{\n\t\"uuid\": \"$UUID\",\n\t\"category\": \"${1:Category Name}\",\n\t\"templates\": [\n\t\t{\n\t\t\t\"name\": \"${2:Template Name}\",\n\t\t\t\"fileExtension\": \"${3:html}\",\n\t\t\t\"snippet\": \"$0\"\n\t\t}\n\t]\n}"
+		}
+	]
+}
