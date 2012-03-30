@@ -1,0 +1,17 @@
+{
+	"uuid": "F9672B7D-5CF3-4469-8602-7A80B51772F6",
+	"category": "objc code",
+	"templates": [
+		{
+			"name": "objc header",
+			"fileExtension": "h",
+			"snippet": "objc header"
+		},
+		{
+			"name": "objc",
+			"fileExtention": "m",
+			"snippet": "//\n//  $FILENAME.m\n//  ${1:Project name}\n//\n//  Created on $DATE.\n//  Copyright $YEAR ${2:Company name}. All rights reserved.\n//\n\n#import \"$FILENAME.h\"\n\n@implementation $FILENAME\n\n\n@end"
+		}
+	]
+	
+}
