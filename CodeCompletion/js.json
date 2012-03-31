@@ -1,0 +1,827 @@
+{
+	"description": "Textastic Code Completion for JavaScript",
+	"uuid": "DE267669-E66E-400A-ACEA-BD906DC2B812",
+
+	"completionSets": [
+		{
+			"name": "js.keywords.control",
+			"defaultAppend": "",
+
+			"strings": [
+				{ "string": "continue", "append": ";" },
+
+				{ "string": "for", "append": " (${1:${2:var i = 0}; ${3:i < count}; ${4:i++}}) {\n\t$0\n}" },
+				{ "string": "forin", "replace": "for (${1:variable} in ${2:object}) {\n\t$0\n}" },
+
+				{ "string": "if", "append": " ($1) {\n\t$0\n}" },
+				{ "string": "else", "append": " {\n\t$0\n}" },
+
+				{ "string": "switch", "append": " ($1) {\n\t$0\n}" },
+				{ "string": "case", "append": " ${1:condition}: " },
+				{ "string": "break", "append": ";" },
+				{ "string": "default", "append": ":" },
+
+				{ "string": "try", "append": " {\n\t$0\n}" },
+				{ "string": "catch", "append": " (${1:error}) {\n\t$0\n}" },
+				{ "string": "finally", "append": " {\n\t$0\n}" },
+				"throw",
+
+				{ "string": "do", "append": " {\n\t$0\n} while ($1);" },
+				{ "string": "while", "append": " (${1:?}){\n\t$2\n}" },
+
+				{ "string": "with", "append": " ($1)  {\n\t$0\n}" },
+
+				"in",
+				"return",
+				"void"
+			]
+		},
+		{
+			"name": "js.keywords.control.else-if",
+
+			"strings": [
+				{ "string": "else if", "append": " ($1) {\n\t$0\n}" }
+			]
+		},
+		{
+			"name": "js.keywords",
+			"defaultAppend": "",
+			"strings": [
+				{ "string": "function", "append": " ${1:name}($2) {\n\t$0\n}" },
+
+				"new",
+				"delete",
+
+				"super",
+				"this",
+				"var",
+
+				"instanceof",
+				"typeof",
+
+				"Infinity",
+				"undefined",
+				"NaN",
+				"true",
+				"false",
+				"null"
+			]
+		},
+		{
+			"name": "js.native-objects",
+			"defaultAppend": "($1)",
+			"strings": [
+				"Array",
+				"Boolean",
+				"Date",
+				"Error",
+				"Function",
+				"Number",
+				"Object",
+				"RegExp",
+				"String",
+				"Image",
+				"Node"
+			]
+		},
+		{
+			"name": "js.native-objects.static",
+			"strings": [
+				"Date",
+				"Math",
+				"Number",
+				"String",
+				"Node"
+			]
+		},
+		{
+			"name": "js.native-objects.Date",
+			"strings": [
+				{ "string": "UTC", "append": "(${1:yyyy}, ${2:mm}, ${3:dd}${4:, ${5:hh}, ${6:mm}, ${7:ss}, ${8:ms}})" }
+			]
+		},
+		{
+			"name": "js.native-objects.Math",
+			"strings": [
+				"E",
+				"LN2",
+				"LN10",
+				"LOG2E",
+				"LOG10E",
+				"PI",
+				"SQRT1_2",
+				"SQRT2",
+				{ "string": "abs", "append": "(${1:number})" },
+				{ "string": "acos", "append": "(${1:number})" },
+				{ "string": "asin", "append": "(${1:number})" },
+				{ "string": "atan", "append": "(${1:number})" },
+				{ "string": "atan2", "append": "(${1:x}, ${2:y})" },
+				{ "string": "ceil", "append": "(${1:number})" },
+				{ "string": "cos", "append": "(${1:number})" },
+				{ "string": "exp", "append": "(${1:number})" },
+				{ "string": "floor", "append": "(${1:number})" },
+				{ "string": "log", "append": "(${1:number})" },
+				{ "string": "max", "append": "(${1:number1}, ${2:number2})" },
+				{ "string": "min", "append": "(${1:number1}, ${2:number2})" },
+				{ "string": "pow", "append": "(${1:number1}, ${2:number2})" },
+				{ "string": "random", "append": "()" },
+				{ "string": "round", "append": "(${1:number})" },
+				{ "string": "sin", "append": "(${1:number})" },
+				{ "string": "sqrt", "append": "(${1:number})" },
+				{ "string": "tan", "append": "(${1:number})" }
+			]
+		},
+		{
+			"name": "js.native-objects.Number",
+			"strings": [
+				"MAX_VALUE",
+				"MIN_VALUE",
+				"NEGATIVE_INFINITY",
+				"POSITIVE_INFINITY"
+			]
+		},
+		{
+			"name": "js.native-objects.String",
+			"strings": [
+				{ "string": "fromCharCode", "append": "(${1:num1}${2:, ${3:num2 ...}})" }
+			]
+		},
+		{
+			"name": "js.native-objects.Node",
+			"strings": [
+				"ATTRIBUTE_NODE",
+				"CDATA_SECTION_NODE",
+				"COMMENT_NODE",
+				"DOCUMENT_FRAGMENT_NODE",
+				"DOCUMENT_NODE",
+				"DOCUMENT_TYPE_NODE",
+				"ELEMENT_NODE",
+				"ENTITY_NODE",
+				"ENTITY_REFERENCE_NODE",
+				"NOTATION_NODE",
+				"PROCESSING_INSTRUCTION_NODE",
+				"TEXT_NODE"
+			]
+		},
+
+
+		{
+			"name": "js.functions",
+			"defaultAppend": "(${1:string})",
+			"strings": [
+				{ "string": "decodeURI", "append": "(${1:encodedURI})" },
+				{ "string": "decodeURIComponent", "append": "(${1:encodedURIComponent})" },
+				"encodeURI",
+				"encodeURIComponent",
+				"escape",
+				"eval",
+				{ "string": "isFinite", "append": "(${1:expression})" },
+				{ "string": "isNaN", "append": "(${1:expression})" },
+				{ "string": "parseInt", "append": "(${1:string}${2:, ${3:base}})" },
+				"parseFloat",
+				"unescape"
+			]
+		},
+		{
+			"name": "js.properties",
+			"strings": [
+				// common
+				"constructor",
+				"length",
+				// Error
+				"message",
+				"name",
+				// Function
+				"caller",
+				// RegExp
+				"global",
+				"ignoreCase",
+				"lastIndex",
+				"multiline",
+				"source"
+			]
+		},
+		{
+			"name": "js.methods",
+			"defaultAppend": "()",
+			"strings": [
+				// common
+				"toLocaleString",
+				"toString",
+				"valueOf",
+
+				// Array
+				{ "string": "concat", "append": "(${1:array1}${2:, ${3:array2, ...}})" },
+				{ "string": "join", "append": "(${1:delimiter})" },
+				"pop",
+				{ "string": "push", "append": "(${1:item1}${2:, ${3:item2, ...}})" },
+				"reverse",
+				"shift",
+				{ "string": "slice", "append": "(${1:startIndex}${2:, ${3:endIndex}})" },
+				{ "string": "sort", "append": "(${1:function(a, b) {$2\\}})" },
+				{ "string": "splice", "append": "(${1:startIndex}, ${2:deleteCount}${3:, ${4:replacingItem1, ...}})" },
+				{ "string": "unshift", "append": "(${1:item1}${2:, ${3:item2, ...}})" },
+
+				// Date
+				"getDate",
+				"getDay",
+				"getFullYear",
+				"getHours",
+				"getMilliseconds",
+				"getMinutes",
+				"getMonth",
+				"getSeconds",
+				"getTime",
+				"getTimezoneOffset",
+				"getUTCDate",
+				"getUTCDay",
+				"getUTCFullYear",
+				"getUTCHours",
+				"getUTCMilliseconds",
+				"getUTCMinutes",
+				"getUTCMonth",
+				"getUTCSeconds",
+				"getYear",
+				{ "string": "parse", "append": "(${1:dateString})" },
+				{ "string": "setDate", "append": "(${1:dateInteger})" },
+				{ "string": "setFullYear", "append": "(${1:yearInteger})" },
+				{ "string": "setHours", "append": "(${1:hoursInteger})" },
+				{ "string": "setMilliseconds", "append": "(${1:msInteger})" },
+				{ "string": "setMinutes", "append": "(${1:minutesInteger})" },
+				{ "string": "setMonth", "append": "(${1:monthInteger})" },
+				{ "string": "setSeconds", "append": "(${1:secondsInteger})" },
+				{ "string": "setTime", "append": "(${1:msInteger})" },
+				{ "string": "setUTCDate", "append": "(${1:dateInteger})" },
+				{ "string": "setUTCFullYear", "append": "(${1:yearInteger})" },
+				{ "string": "setUTCHours", "append": "(${1:hoursInteger})" },
+				{ "string": "setUTCMilliseconds", "append": "(${1:msInteger})" },
+				{ "string": "setUTCMinutes", "append": "(${1:minutesInteger})" },
+				{ "string": "setUTCMonth", "append": "(${1:monthInteger})" },
+				{ "string": "setUTCSeconds", "append": "(${1:secondsInteger})" },
+				{ "string": "setYear", "append": "(${1:yearInteger})" },
+				"toDateString",
+				"toGMTString",
+				"toLocaleDateString",
+				"toLocaleTimeString",
+				"toTimeString",
+				"toUTCString",
+
+				// Function
+				{ "string": "apply", "append": "(${1:${2:thisOjbect}, ${3:argumentsArray}})" },
+				{ "string": "call", "append": "(${1:${2:thisObject}${3:, ${4:arg1, ...}}})" },
+
+				// Number
+				{ "string": "toExponential", "append": "(${1:fractionDigits})" },
+				{ "string": "toFixed", "append": "(${1:fractionDigits})" },
+				{ "string": "toPrecision", "append": "(${1:precisionDigits})" },
+
+				// Object
+				{ "string": "hasOwnProperty", "append": "(${1:propertyName})" },
+				{ "string": "isPrototypeOf", "append": "(${1:objectReference})" },
+
+				// RegExp
+				{ "string": "exec", "append": "(${1:string})" },
+				{ "string": "test", "append": "(${1:string})" },
+
+				// String
+				{ "string": "charAt", "append": "(${1:positionIndex})" },
+				{ "string": "charCodeAt", "append": "(${1:positionIndex})" },
+				{ "string": "concat", "append": "(${1:string2})" },
+				{ "string": "indexOf", "append": "(${1:search}${2:, ${3:fromIndex}})" },
+				{ "string": "lastIndexOf", "append": "(${1:search}${2:, ${3:fromIndex}})" },
+				{ "string": "localeCompare", "append": "(${1:string2})" },
+				{ "string": "match", "append": "(${1:regex})" },
+				{ "string": "replace", "append": "(${1:regex}, ${2:replacement})" },
+				{ "string": "search", "append": "(${1:regex})" },
+				{ "string": "slice", "append": "(${1:startPositionIndex}, ${2:endPositionIndex})" },
+				{ "string": "split", "append": "(${1:delimiter}${2:, ${3:limitInteger}})" },
+				{ "string": "substr", "append": "(${1:startPositionIndex}${2:, ${3:length}})" },
+				{ "string": "substring", "append": "(${1:startPositionIndex}, ${2:endPositionIndex})" },
+				"toLocaleLowerCase",
+				"toLocaleUpperCase",
+				"toLowerCase",
+				"toUpperCase"
+			]
+		},
+
+		// DOM support
+
+		// DOM variables
+		{
+			"name": "js.dom.variables",
+
+			"strings": [
+				"document",
+				"history",
+				"localStorage",
+				"location",
+				"screen",
+				"window",
+				"self",
+				"top",
+				"parent"
+			]
+		},
+
+		// DOM properties
+		{
+			"name": "js.dom.properties",
+
+			"strings": [
+				"accessKey",
+				"attributes",
+				"childNodes",
+				"className",
+				"clientHeight",
+				"clientWidth",
+				"contentEditable",
+				"dir",
+				"disabled",
+				"firstChild",
+				"lastChild",
+				"id",
+				"innerHTML",
+				"innerText",
+				"lang",
+				"nextSibling",
+				"previousSibling",
+				"nodeName",
+				"nodeType",
+				"nodeValue",
+				"offsetHeight",
+				"offsetWidth",
+				"offsetLeft",
+				"offsetTop",
+				"offsetParent",
+				"ownerDocument",
+				"parentNode",
+				"scrollHeight",
+				"scrollWidth",
+				"scrollLeft",
+				"scrollTop",
+				"style",
+				"tabIndex",
+				"tagName",
+				"textContent",
+				"title"
+			]
+		},
+
+		// DOM methods
+		{
+			"name": "js.dom.methods",
+			"defaultAppend": "()",
+
+			"strings": [
+				{ "string": "addEventListener", "append": "(${1:eventType}, ${2:listener}, ${4:useCapture})" },
+				{ "string": "appendChild", "append": "(${1:nodeObject})" },
+				"blur",
+				"click",
+				{ "string": "cloneNode", "append": "(${1:deepCopyBoolean})" },
+				{ "string": "dispatchEvent", "append": "(${1:eventObjectReference})" },
+				"focus",
+				{ "string": "getAttribute", "append": "(${1:attributeName})" },
+				{ "string": "getAttributeNode", "append": "(${1:attributeName})" },
+				{ "string": "getAttributeNodeNS", "append": "(${1:namespaceURI}, ${2:localName})" },
+				{ "string": "getAttributeNS", "append": "(${1:namespaceURI}, ${2:localName})" },
+				{ "string": "getElementsByTagName", "append": "(${1:tagName})" },
+				{ "string": "getElementsByTagNameNS", "append": "(${1:namespaceURI}, ${2:localName})" },
+				{ "string": "hasAttribute", "append": "(${1:attributeName})" },
+				{ "string": "hasAttributeNS", "append": "(${1:namespaceURI}, ${2:localName})" },
+				"hasChildNodes",
+				{ "string": "insertBefore", "append": "(${1:newChildNode}, ${2:referenceChildNodeOrNull})" },
+				{ "string": "isSupported", "append": "(${1:feature}, ${2:version})" },
+				{ "string": "lookupNamespaceURI", "append": "(${1:prefix})" },
+				{ "string": "lookupPrefix", "append": "(${1:namespaceURI})" },
+				"normalize",
+				{ "string": "removeAttribute", "append": "(${1:attributeName})" },
+				{ "string": "removeAttributeNode", "append": "(${1:attributeNodeReference})" },
+				{ "string": "removeAttributeNS", "append": "(${1:namespaceURI}, ${2:localName})" },
+				{ "string": "removeChild", "append": "(${1:childNodeReference})" },
+				{ "string": "removeEventListener", "append": "(${1:eventType}, ${2:listener}, ${4:useCapture})" },
+				{ "string": "replaceChild", "append": "(${1:newChildNodeReference}, ${2:oldChildNodeReference})" },
+				{ "string": "setAttribute", "append": "(${1:attributeName}, ${2:value})" },
+				{ "string": "setAttributeNode", "append": "(${1:attributeObjectReference})" },
+				{ "string": "setAttributeNodeNS", "append": "(${1:attributeObjectReference})" },
+				{ "string": "setAttributeNS", "append": "(${1:namespaceURI}, ${2:qualifiedName}, ${3:value})" },
+				"toString"
+			]
+		},
+
+		// Event Strings
+		{
+			"name": "js.dom.events",
+
+			"strings": [
+				"abort",
+				"blur",
+				"change",
+				"click",
+				"error",
+				"focus",
+				"load",
+				"mousedown",
+				"mousemove",
+				"mouseout",
+				"mouseover",
+				"mouseup",
+				"reset",
+				"resize",
+				"scroll",
+				"select",
+				"submit",
+				"storage",
+				"unload"
+			]
+		},
+
+		// Document
+		{
+			"name": "js.dom.document.properties",
+
+			"strings": [
+				"anchors",
+				"applets",
+				"body",
+				"cookie",
+				"defaultView",
+				"designMode",
+				"documentElement",
+				"documentURI",
+				"doctype",
+				"domain",
+				"embeds",
+				"forms",
+				"frames",
+				"images",
+				"implementation",
+				"lastModified",
+				"links",
+				"referrer",
+				"styleSheets",
+				"title",
+				"URL"
+			]
+		},
+
+		{
+			"name": "js.dom.document.methods",
+
+			"defaultAppend": "()",
+
+			"strings": [
+				"clear",
+				"close",
+				{ "string": "createAttribute", "append": "(${1:attributeName})" },
+				{ "string": "createAttributeNS", "append": "(${1:namespaceURI}, ${2:qualifiedName})" },
+				{ "string": "createCDATASection", "append": "(${1:data})" },
+				{ "string": "createComment", "append": "(${1:commentText})" },
+				"createDocumentFragment",
+				{ "string": "createElement", "append": "(${1:tagName})" },
+				{ "string": "createElementNS", "append": "(${1:namespaceURI}, ${2:qualifiedName})" },
+				{ "string": "createEntityReference", "append": "(${1:entityName})" },
+				{ "string": "createEvent", "append": "(${1:eventType})" },
+				{ "string": "createProcessingInstruction", "append": "(${1:target}, ${2:data})" },
+				"createRange",
+				{ "string": "createTextNode", "append": "(${1:text})" },
+				{ "string": "createTreeWalker", "append": "(${1:rootNode}, ${2:whatToShow}, ${3:filterFunction}, ${4:entityRefExpansion})" },
+				{ "string": "elementFromPoint", "append": "(${1:x}, ${2:y})" },
+				{ "string": "execCommand", "append": "(${1:commandName}${2:, ${3:displayUI}, ${4:value}})" },
+				{ "string": "getElementById", "append": "(${1:id})" },
+				{ "string": "getElementsByName", "append": "(${1:elementName})" },
+				{ "string": "importNode", "append": "(${1:nodeReference}, ${2:deepBoolean})" },
+				{ "string": "open", "append": "(${1:${2:MIMEType}, ${3:replace}})" },
+				{ "string": "write", "append": "(${1:string1}${2:, ${3:string2, ...}})" },
+				{ "string": "writeln", "append": "(${1:string1}${2:, ${3:string2, ...}})" }
+			]
+		},
+
+		// History
+		{
+			"name": "js.dom.history.properties",
+
+			"strings": [
+				"length"
+			]
+		},
+
+		{
+			"name": "js.dom.history.methods",
+			"defaultAppend": "()",
+
+			"strings": [
+				"back",
+				"forward",
+				{ "string": "go", "append": "(${1:stepCountOrURL})" }
+			]
+		},
+
+		// Location
+		{
+			"name": "js.dom.location.properties",
+
+			"strings": [
+				"hash",
+				"host",
+				"hostname",
+				"href",
+				"pathname",
+				"port",
+				"protocol",
+				"search"
+			]
+		},
+		{
+			"name": "js.dom.location.methods",
+
+			"strings": [
+				{ "string": "reload", "append": "(${1:byPassCache})" },
+				{ "string": "replace", "append": "(${1:URL})" }
+			]
+		},
+
+		// Screen
+		{
+			"name": "js.dom.screen.properties",
+
+			"strings": [
+				"availHeight",
+				"availWidth",
+				"availLeft",
+				"availTop",
+				"colorDepth",
+				"height",
+				"width",
+				"pixelDepth"
+			]
+		},
+
+		// Window
+		{
+			"name": "js.dom.window.properties",
+
+			"strings": [
+				"closed",
+				"defaultStatus",
+				"document",
+				"frameElement",
+				"frames",
+				"history",
+				"innerHeight",
+				"innerWidth",
+				"length",
+				"location",
+				"localStorage",
+				"name",
+				"navigator",
+				"opener",
+				"outerHeight",
+				"outerWidth",
+				"pageXOffset",
+				"pageYOffset",
+				"parent",
+				"screen",
+				"screenLeft",
+				"screenTop",
+				"screenX",
+				"screenY",
+				"scrollX",
+				"scrollY",
+				"status"
+			]
+		},
+
+		{
+			"name": "js.dom.window.methods.global",
+
+			"strings": [
+				{ "string": "alert", "append": "(${1:message})" },
+				{ "string": "clearInterval", "append": "(${1:intervalID})" },
+				{ "string": "clearTimeout", "append": "(${1:timeoutID})" },
+				{ "string": "confirm", "append": "(${1:message})" },
+				{ "string": "prompt", "append": "(${1:message}, ${2:defaultReply})" },
+				{ "string": "setInterval", "append": "(${1:functionReference}, ${2:milliseconds})" },
+				{ "string": "setTimeout", "append": "(${1:functionReference}, ${2:milliseconds})" }
+			]
+		},
+
+		{
+			"name": "js.dom.window.methods",
+			"defaultAppend": "()",
+
+			"strings": [
+				"close",
+				"getSelection",
+				{ "string": "moveBy", "append": "(${1:deltaX}, ${2:deltaY})" },
+				{ "string": "moveTo", "append": "(${1:x}, ${2:y})" },
+				{ "string": "open", "append": "(${1:URL}, ${2:windowName}${3:, ${4:windowFeatures}})" },
+				"print",
+				{ "string": "resizeBy", "append": "(${1:deltaX}, ${2:deltaY})" },
+				{ "string": "resizeTo", "append": "(${1:x}, ${2:y})" },
+				{ "string": "scroll", "append": "(${1:x}, ${2:y})" },
+				{ "string": "scrollBy", "append": "(${1:deltaX}, ${2:deltaY})" },
+				{ "string": "scrollTo", "append": "(${1:x}, ${2:y})" }
+			]
+		},
+
+		{
+			"name": "js.dom.localStorage.methods",
+
+			"strings": [
+				{ "string": "key", "append": "(${1:index})" },
+				{ "string": "getItem", "append": "(${1:key})" },
+				{ "string": "setItem", "append": "(${1:key}, ${2:value})" },
+				{ "string": "removeItem", "append": "(${1:key})" },
+				{ "string": "clear", "append": "()" }
+			]
+		}
+	],
+
+	"contexts": [
+		{
+			"description": "Control keywords",
+			"scope": "source.js - comment - string",
+			"pattern": "(?<!\\.|\\[|\\(|,)\\b([a-zA-Z]*)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"js.keywords.control"
+			]
+		},
+		{
+			"description": "else if keyword",
+			"scope": "source.js - comment - string",
+			"pattern": "(?<!\\.|\\[|\\(|,)\\b(e[lse if]*)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"js.keywords.control.else-if"
+			]
+		},
+		{
+			"description": "Non-control keywords",
+			"scope": "source.js - comment - string",
+			"pattern": "(?<!\\.)\\b([a-zA-Z]*)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"js.keywords"
+			]
+		},
+		{
+			"description": "Variables and functions",
+			"scope": "source.js - comment - string",
+			"pattern": "(?<!\\.)\\b([a-zA-Z]*)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"js.functions",
+				"js.dom.variables",
+				"js.dom.window.methods.global"
+			]
+		},
+		{
+			"description": "Properties and methods",
+			"scope": "source.js - comment - string",
+			"pattern": "\\.([a-zA-Z][a-zA-Z ]*)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"js.properties",
+				"js.methods",
+				"js.dom.properties",
+				"js.dom.methods"
+			]
+		},
+		{
+			"description": "Native objects",
+			"scope": "source.js - comment - string",
+			"pattern": "\\bnew\\s+([a-zA-Z]*)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"js.native-objects"
+			]
+		},
+		{
+			"description": "Native objects, without \"new\"",
+			"scope": "source.js - comment - string",
+			"pattern": "(?<!new )\\b([A-Z][a-zA-Z]*)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"js.native-objects.static"
+			]
+		},
+		{
+			"description": "Native objects, Date",
+			"scope": "source.js - comment - string",
+			"pattern": "\\bDate\\.(\\w*)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"js.native-objects.Date"
+			]
+		},
+		{
+			"description": "Native objects, Math",
+			"scope": "source.js - comment - string",
+			"pattern": "\\bMath\\.(\\w*)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"js.native-objects.Math"
+			]
+		},
+		{
+			"description": "Native objects, Number",
+			"scope": "source.js - comment - string",
+			"pattern": "\\bNumber\\.(\\w*)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"js.native-objects.Number"
+			]
+		},
+		{
+			"description": "Native objects, String",
+			"scope": "source.js - comment - string",
+			"pattern": "\\bString\\.(\\w*)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"js.native-objects.String"
+			]
+		},
+		{
+			"description": "Native objects, Node",
+			"scope": "source.js - comment - string",
+			"pattern": "\\bNode\\.(\\w*)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"js.native-objects.Node"
+			]
+		},
+
+		{
+			"description": "DOM events",
+			"scope": "source.js string",
+			"pattern": "\\b(?:addEventListener|removeEventListener)\\s*\\(\\s*['\"]([a-zA-Z]*)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"js.dom.events"
+			]
+		},
+
+		// DOM properties and methods
+		{
+			"description": "document",
+			"scope": "source.js - comment - string",
+			"pattern": "\\bdocument\\.(\\w*)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"js.dom.document.properties",
+				"js.dom.document.methods"
+			]
+		},
+		{
+			"description": "history",
+			"scope": "source.js - comment - string",
+			"pattern": "\\bhistory\\.(\\w*)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"js.dom.history.properties",
+				"js.dom.history.methods"
+			]
+		},
+		{
+			"description": "location",
+			"scope": "source.js - comment - string",
+			"pattern": "\\blocation\\.(\\w*)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"js.dom.location.properties",
+				"js.dom.location.methods"
+			]
+		},
+		{
+			"description": "screen",
+			"scope": "source.js - comment - string",
+			"pattern": "\\bscreen\\.(\\w*)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"js.dom.screen.properties"
+			]
+		},
+		{
+			"description": "localStorage",
+			"scope": "source.js - comment - string",
+			"pattern": "\\blocalStorage\\.(\\w*)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"js.dom.localStorage.methods"
+			]
+		},
+		{
+			"description": "window",
+			"scope": "source.js - comment - string",
+			"pattern": "\\b(window|opener|parent|self|top)\\.(\\w*)",
+			"completionCaptureIndex": 2,
+			"completionSetNames": [
+				"js.dom.window.properties",
+				"js.dom.window.methods",
+				"js.dom.window.methods.global"
+			]
+		}
+
+	]
+}
