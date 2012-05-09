@@ -1,0 +1,101 @@
+{
+	"description": "Textastic Code Completion for C",
+	"uuid": "65F91257-43E1-4E77-AB24-C17112FEDD51",
+
+	"completionSets": [
+		{
+			"name": "c.keywords.control",
+			"defaultAppend": "",
+
+			"strings": [
+				"return",
+				"void",
+				{ "string": "break", "append": ";" },
+				{ "string": "case", "append": " ${1:condition}: " },
+				{ "string": "continue", "append": ";" },
+				{ "string": "default", "append": ":" },
+				{ "string": "do", "append": " {\n\t$0\n} while ($1);" },
+				{ "string": "else", "append": " {\n\t$0\n}" },
+				{ "string": "for", "append": " (${1:i = 0}; i ${3:< count}; ${4:i++}) {\n\t$0\n}" },
+				{ "string": "fori", "replace": "unsigned int i;\nfor (${1:variable} in ${2:object}) {\n\t$0\n}" },
+				{ "string": "if", "append": " (${1:predicate}) {\n\t$0\n}" },
+				{ "string": "switch", "append": " ($1) {\n\t$0\n}" },
+				{ "string": "while", "append": " (${1:predicate}){\n\t$2\n}" }
+			]
+		},
+		{
+			"name": "c.keywords.control.else-if",
+			"defaultAppend": "",
+
+			"strings": [
+				{ "string": "else if", "append": " ($1) {\n\t$0\n}" }
+			]
+		},
+		{
+			"name": "c.keywords",
+			"defaultAppend": "",
+            
+			"strings": [
+				"false",
+				"NULL",
+				"true",
+    			{ "string": "include <>", "replace": "#include <${1:filename}>" },
+    			{ "string": "include \"\"", "replace": "#include \"${1:filename}\"" },
+                "auto",
+                "char",
+                "const",
+                "double",
+                "enum",
+                "extern",
+                "float",
+                "goto",
+                "int",
+                "long",
+                "register",
+                "short",
+                "signed",
+                "static",
+                "struct",
+                "union",
+                "unsigned",
+                "volatile",
+                { "string": "free", "append": "(${1:pointer});\n$0" },
+                { "string": "malloc", "append": "(${1:size});\n$0" },
+                { "string": "sizeof", "append": "(${1:type_or_variable});\n$0" },
+                { "string": "struct-def", "replace": "struct ${1:name} {\n\t${2:members}\n};\n$0" },
+                { "string": "typedef", "append": " ${1:existing} ${2:new}\n$0" },
+                { "string": "union-def", "replace": "union ${1:name} {\n\t${2:members}\n};\n$0" }
+			]
+		}
+	],
+
+	"contexts": [
+		{
+			"description": "Control keywords",
+			"scope": "source.c - comment - string",
+			"pattern": "(?<!\\.|\\[|\\(|,)\\b([a-zA-Z]*)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"c.keywords.control"
+			]
+		},
+		{
+			"description": "else if keyword",
+			"scope": "source.c - comment - string",
+			"pattern": "(?<!\\.|\\[|\\(|,)\\b(e[lse if]*)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"c.keywords.control.else-if"
+			]
+		},
+		{
+			"description": "Non-control keywords",
+			"scope": "source.c - comment - string",
+			"pattern": "(?<!\\.)\\b([a-zA-Z]*)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"c.keywords"
+			]
+		}
+	]
+}

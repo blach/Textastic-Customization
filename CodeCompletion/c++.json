@@ -1,0 +1,63 @@
+{
+	"description": "Textastic Code Completion for C++",
+	"uuid": "8B31D4AD-E6B9-41F4-999E-4B5B1F6B4510",
+
+	"completionSets": [
+    	{
+    		"name": "c++.keywords.control",
+    		"defaultAppend": "",
+
+    		"strings": [
+                { "string": "catch", "append": " (${1:predicate}) {\n\t${2:body1}\n}\n" },
+                { "string": "try", "append": " {\n\t${1:body1}\n}\n" },
+                { "string": "try-catch", "replace": "try {\n\t${1:body1}\n} catch (${2:exception}) {\n\t${3:body2}\n}\n" }
+    		]
+    	},
+		{
+			"name": "c++.keywords",
+			"defaultAppend": "",
+            
+			"strings": [
+                { "string": "class-dec", "replace": "class ${1:classname} {\npublic:\n\t${1:classname}(${2:args});\n\tvirtual ~${1:classname}(${3:args});\nprivate:\n\t$0\n};\n\n" },
+                { "string": "class-imp", "replace": "${1:classname}::${1:classname}(${2:args}) {\n\t${0:body}\n}\n\n${1:classname}::${1:classname}() {\n\t\n}\n\n" },
+                "bool",
+                "const_cast",
+                "delete",
+                "dynamic_cast",
+                "friend",
+                "inline",
+                "namespace",
+                "new",
+                "operator",
+                "protected",
+                "static_cast",
+                "template",
+                "this",
+                "typename",
+                "using",
+                "virtual"
+			]
+		}
+	],
+
+	"contexts": [
+    	{
+    		"description": "Control keywords",
+    		"scope": "source.c++ - comment - string",
+    		"pattern": "(?<!\\.|\\[|\\(|,)\\b([a-zA-Z]*)",
+    		"completionCaptureIndex": 1,
+    		"completionSetNames": [
+    			"c++.keywords.control"
+    		]
+    	},
+		{
+			"description": "Non-control keywords",
+			"scope": "source.c++ - comment - string",
+			"pattern": "(?<!\\.)\\b([a-zA-Z]*)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"c++.keywords"
+			]
+		}
+	]
+}
