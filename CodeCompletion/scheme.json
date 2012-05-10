@@ -1,0 +1,53 @@
+{
+	"description": "Textastic Code Completion for Scheme",
+	"uuid": "02065C68-EBE1-4F12-B042-34A89D64F232",
+
+	"completionSets": [
+    	{
+    		"name": "scheme.keywords.control",
+    		"defaultAppend": "",
+
+    		"strings": [
+                { "string": "begin", "replace": "begin ${1:expresions...})$0" },
+                { "string": "cond", "replace": "cond\n\t(${1:predicate1} ${2:result1})\n\t(${3:predicate2} ${4:result2})\n\t${5:(${6:predicate3} ${7:result3})}${8:(else ${9:result_else})})\n\n" },
+                { "string": "if", "replace": "if ${1:predicate} ${2:true} ${3:false})$0" },
+                { "string": "set", "replace": "set! ${1:var} ${2:new_value})$0" }
+    		]
+    	},
+		{
+			"name": "scheme.keywords",
+			"defaultAppend": "",
+            
+			"strings": [
+                { "string": "define", "replace": "define ${1:name} ${2:body})$0" },
+                { "string": "lambda", "replace": "lambda (${1:args}) ${2:body})$0" },
+                { "string": "let", "replace": "let (${1:(${2:var} ${3:val})}${4:(${5:var} ${6:val})})${7:body})$0" },
+                { "string": "let*", "replace": "let* (${1:(${2:var} ${3:val})}${4:(${5:var} ${6:val})})${7:body})$0" },
+                { "string": "newline", "replace": "(newline)$0" },
+                { "string": "print", "replace": "print ${1:args})$0" },
+                { "string": "println", "replace": "print ${1:args}) (newline)$0" }
+			]
+		}
+	],
+
+	"contexts": [
+    	{
+    		"description": "Control keywords",
+    		"scope": "source.scheme - comment - string",
+    		"pattern": "(?<!\\.|\\[|\\(|,)\\b([a-zA-Z]*)",
+    		"completionCaptureIndex": 1,
+    		"completionSetNames": [
+    			"scheme.keywords.control"
+    		]
+    	},
+		{
+			"description": "Non-control keywords",
+			"scope": "source.scheme - comment - string",
+			"pattern": "(?<!\\.)\\b([a-zA-Z]*)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"scheme.keywords"
+			]
+		}
+	]
+}
