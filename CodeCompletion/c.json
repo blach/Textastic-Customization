@@ -1,0 +1,178 @@
+{
+	"description": "Textastic Code Completion for C",
+	"uuid": "5172F0C4-E2A6-4EC4-ADFA-B946A09FC070",
+
+	"completionSets": [
+		{
+			"name": "c.keywords.control",
+			"defaultAppend": "",
+
+			"strings": [
+				"return",
+				{ "string": "break", "append": ";" },
+				{ "string": "case", "append": " ${1:condition}: " },
+				{ "string": "continue", "append": ";" },
+				{ "string": "default", "append": ":" },
+				{ "string": "do", "append": " {\n\t$0\n} while ($1);" },
+				{ "string": "else", "append": " {\n\t$0\n}" },
+				{ "string": "for", "append": " (${1:i = 0}; i ${3:< count}; ${4:i++}) {\n\t$0\n}" },
+				{ "string": "goto", "append": "${1:label};" },
+				{ "string": "if", "append": " ($1) {\n\t$0\n}" },
+				{ "string": "switch", "append": " ($1) {\n\t$0\n}" },
+				{ "string": "while", "append": " ($1) {\n\t$2\n}" }
+			]
+		},
+		{
+			"name": "c.keywords.control.else-if",
+			"defaultAppend": "",
+
+			"strings": [
+				{ "string": "else if", "append": " ($1) {\n\t$0\n}" }
+			]
+		},
+		{
+			"name": "c.keywords.structures",
+			"defaultAppend": "",
+            
+			"strings": [
+				"struct",
+				"union",
+                "enum",
+                { "string": "enumdef", "replace": "enum ${1:name} {\n\t${2:enumerator1} = ${3:value1}\n\t${4:enumerator2} = ${5:value2}\n};" },
+                { "string": "structdef", "replace": "struct ${1:name} {\n\t${2:members}\n};" },
+                { "string": "typedef", "append": " ${1:existing} ${2:new};" },
+                { "string": "uniondef", "replace": "union ${1:name} {\n\t${2:members}\n};" }
+			]
+		},
+		{
+			"name": "c.keywords.operators",
+			"defaultAppend": "",
+            
+			"strings": [
+                { "string": "sizeof", "append": "(${1:type});\n$0" }
+			]
+		},
+		{
+			"name": "c.keywords.dataTypes",
+			"defaultAppend": "",
+            
+			"strings": [
+				"void",
+				"char",
+				"double",
+				"float",
+				"int",
+				"long",
+				"short",
+				"signed",
+                "unsigned"
+			]
+		},
+		{
+			"name": "c.keywords.storageClasses",
+			"defaultAppend": "",
+            
+			"strings": [
+				"auto",
+                "extern",
+                "register",
+                "static"
+			]
+		},
+		{
+			"name": "c.keywords.typeQualifiers",
+			"defaultAppend": "",
+            
+			"strings": [
+				"const",
+                "volatile"
+			]
+		},
+		{
+			"name": "c.constants",
+			"defaultAppend": "",
+            
+			"strings": [
+				"true",
+				"false",
+				"NULL"
+			]
+		},
+
+		{
+			"name": "c.functions",
+			"defaultAppend": "",
+            
+			"strings": [
+                { "string": "free", "append": "(${1:pointer})" },
+                { "string": "malloc", "append": "(${1:size})" }
+			]
+		},
+		{
+			"name": "c.preprocessor.directives",
+			"strings": [
+    			{ "string": "include <", "append": "${1:filename}>" },
+    			{ "string": "include \"", "append": "${1:filename}\"" },
+
+    			"if",
+    			"ifdef",
+    			"ifndef",
+    			"elif",
+    			"else",
+
+    			"define",
+    			"undef",
+
+    			"pragma",
+
+    			"error",
+    			"warning"
+			]
+		}
+	],
+
+	"contexts": [
+		{
+			"description": "Control keywords",
+			"scope": "(source.c | source.c++ | source.objc | source.objc++) - comment - string",
+			"pattern": "(?<!\\.|\\[|\\(|,)\\b([a-zA-Z]*)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"c.keywords.control"
+			]
+		},
+		{
+			"description": "else if keyword",
+			"scope": "(source.c | source.c++ | source.objc | source.objc++) - comment - string",
+			"pattern": "(?<!\\.|\\[|\\(|,)\\b(e[lse if]*)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"c.keywords.control.else-if"
+			]
+		},
+		{
+			"description": "Preprocessor directives",
+			"scope": "(source.c | source.c++ | source.objc | source.objc++) - comment - string",
+			"pattern": "\\s*#([a-zA-Z]*)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"c.preprocessor.directives"
+			]
+		},
+		{
+			"description": "Non-control keywords",
+			"scope": "(source.c | source.c++ | source.objc | source.objc++) - comment - string",
+			"pattern": "(?<!\\.)\\b([a-zA-Z]*)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"c.keywords.structures",
+				"c.keywords.operators",
+				"c.keywords.dataTypes",				
+				"c.keywords.storageClasses",
+				"c.keywords.typeQualifiers",
+				"c.functions",
+				"c.constants"
+			]
+		}
+	]
+}
