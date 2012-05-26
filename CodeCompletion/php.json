@@ -4151,7 +4151,7 @@
 				"const",
 
 				{ "string": "interface", "append": " ${1:InterfaceName} {\n\t$0\n}" },
-				{ "string": "function", "append": " ${1:FunctionName}($2) {\n\t$0\n}" },
+				{ "string": "function", "append": " ${1:function_name}($2) {\n\t$0\n}" },
 				
 				"old_function",
 				"var",
@@ -4175,7 +4175,7 @@
 				{ "string": "do", "append": " {\n\t$0\n} while ($1);" },
 				{ "string": "else", "append": " {\n\t$0\n}" },
 				{ "string": "elseif", "append": " ($1) {\n\t$0\n}" },
-				{ "string": "for", "append": " (${1:$i = 0}; $i ${3:< count}; ${4:$i++}) {\n\t$0\n}" },
+				{ "string": "for", "append": " (${1:\\$i = 0}; \\$i ${3:< count}; ${4:\\$i++}) {\n\t$0\n}" },
 				{ "string": "foreach", "append": " (${1:\\$array} as ${2:${3:\\$key} => }${4:\\$value}) {\n\t$0\n}" },
 				{ "string": "goto", "append": " ${1:label};" },
 				{ "string": "if", "append": " ($1) {\n\t$0\n}" },
@@ -4205,7 +4205,13 @@
 
 				// operators
 				"new",
-				"clone"
+				"clone",
+
+				"true",
+				"false",
+				"TRUE",
+				"FALSE",
+				"NULL"
 			]
 		},
 
