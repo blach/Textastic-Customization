@@ -4141,6 +4141,88 @@
 				{ "string": "zip_read", "append": "(${1:zip})" },
 				{ "string": "zlib_get_coding_type", "append": "(${1:oid})" }	
 			]
+		},
+		{
+			"name": "php.keywords",
+			"strings": [
+				"cfunction",
+				{ "string": "class", "append": " ${1:ClassName} {\n\t$0\n}" },
+				"extends",
+				"const",
+
+				{ "string": "interface", "append": " ${1:InterfaceName} {\n\t$0\n}" },
+				{ "string": "function", "append": " ${1:FunctionName}($2) {\n\t$0\n}" },
+				
+				"old_function",
+				"var",
+
+				// scope
+				"abstract",
+				"global",
+				"final",
+				"private",
+				"protected",
+				"public",
+				"static",
+
+				// control
+				"as",
+				{ "string": "break", "append": ";" },
+				{ "string": "case", "append": " ${1:condition}: " },
+				{ "string": "continue", "append": ";" },
+				{ "string": "declare", "append": " ($1)" },
+				{ "string": "default", "append": ":" },
+				{ "string": "do", "append": " {\n\t$0\n} while ($1);" },
+				{ "string": "else", "append": " {\n\t$0\n}" },
+				{ "string": "elseif", "append": " ($1) {\n\t$0\n}" },
+				{ "string": "for", "append": " (${1:$i = 0}; $i ${3:< count}; ${4:$i++}) {\n\t$0\n}" },
+				{ "string": "foreach", "append": " (${1:\\$array} as ${2:${3:\\$key} => }${4:\\$value}) {\n\t$0\n}" },
+				{ "string": "goto", "append": " ${1:label};" },
+				{ "string": "if", "append": " ($1) {\n\t$0\n}" },
+
+				"namespace",
+
+				{ "string": "switch", "append": " ($1) {\n\t$0\n}" },
+
+				"use",
+
+				{ "string": "while", "append": " ($1) {\n\t$2\n}" },
+
+				"return",
+
+				// alternate end
+				{ "string": "endfor", "append": ";" },
+				{ "string": "endforeach", "append": ";" },
+				{ "string": "endif", "append": ";" },
+				{ "string": "endswitch", "append": ";" },
+				{ "string": "endwhile", "append": ";" },
+
+				// exception
+				{ "string": "catch", "append": " (${1:\\$exception}) {\n\t$0\n}" },
+				{ "string": "try", "append": " {\n\t$0\n}" },
+				"throw",
+				"exception",
+
+				// operators
+				"new",
+				"clone"
+			]
+		},
+
+		{
+			"name": "php.global-variables",
+			"defaultAppend": "[$1]",
+
+			"strings": [
+				"_SERVER",
+				"_GET",
+				"_POST",
+				"_FILES",
+				"_COOKIE",
+				"_SESSION",
+				"_REQUEST",
+				"_ENV"
+			]
 		}
 	],
 
@@ -4151,7 +4233,17 @@
 			"pattern": "\\b([a-zA-Z_\\x7f-\\xff][a-zA-Z0-9_\\x7f-\\xff]*)",
 			"completionCaptureIndex": 1,
 			"completionSetNames": [
-				"php.functions"
+				"php.functions",
+				"php.keywords"
+			]
+		},
+		{
+			"description": "PHP global variables",
+			"scope": "source.php - comment - string",
+			"pattern": "\\$([a-zA-Z_]*)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"php.global-variables"
 			]
 		}
 	]
