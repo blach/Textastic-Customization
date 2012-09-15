@@ -4236,7 +4236,7 @@
 		{
 			"description": "PHP function completion",
 			"scope": "source.php - variable.other.php - comment - string",
-			"pattern": "\\b([a-zA-Z_\\x7f-\\xff][a-zA-Z0-9_\\x7f-\\xff]*)",
+			"pattern": "(?<!<\\?)\\b([a-zA-Z_\\x7f-\\xff][a-zA-Z0-9_\\x7f-\\xff]*)",
 			"completionCaptureIndex": 1,
 			"completionSetNames": [
 				"php.functions",
