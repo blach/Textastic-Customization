@@ -49,7 +49,7 @@
 			"defaultAppend": "",
             
 			"strings": [
-                { "string": "sizeof", "append": "(${1:type});\n$0" }
+                { "string": "sizeof", "append": "(${1:type})$0" }
 			]
 		},
 		{
@@ -101,7 +101,7 @@
 
 		{
 			"name": "c.functions",
-			"defaultAppend": "",
+			"defaultAppend": "($1)",
             
 			"strings": [
                 { "string": "free", "append": "(${1:pointer})" },
