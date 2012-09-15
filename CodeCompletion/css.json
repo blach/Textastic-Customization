@@ -273,7 +273,7 @@
 	"contexts": [
 		{
 			"description": "CSS Property Completion",
-			"scope": "source.css meta.property-list.css",
+			"scope": "source.css meta.property-list.css, source.css.less",
 			"pattern": "(?<!:)(?:^|\\s|;)([a-zA-Z-]+)",
 			"completionCaptureIndex": 1,
 			"completionSetNames": [
