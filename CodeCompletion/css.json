@@ -274,13 +274,21 @@
 		{
 			"description": "CSS Property Completion",
 			"scope": "source.css meta.property-list.css, source.css.less",
-			"pattern": "(?<!:)(?:^|\\s|;)([a-zA-Z-]+)",
+			"pattern": "(?<!:)(?:^|\\s|;)([a-zA-Z\\-+]+)",
 			"completionCaptureIndex": 1,
 			"completionSetNames": [
 				"css.properties",
 				"css.properties.css3"
 			]
+		},
+		{
+			"description": "CSS At-Rule Completion",
+			"scope": "source.css - meta.property-list.css, source.css.less",
+			"pattern": "(?:^|\\s|\\})(@[a-zA-Z-+]*)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				// this is done through Emmet
+			]
 		}
-
 	]
 }
