@@ -727,7 +727,7 @@
 		{
 			"description": "Non-control keywords",
 			"scope": "(source.objc | source.objc++) - comment - string",
-			"pattern": "(?<!\\.|@)\\b([a-zA-Z]*)",
+			"pattern": "(?<!\\.|@)\\b([a-zA-Z]+)",
 			"completionCaptureIndex": 1,
 			"completionSetNames": [
 				"objc.keywords.dataTypes",                

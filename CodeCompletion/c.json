@@ -287,7 +287,7 @@
 		{
 			"description": "Control keywords",
 			"scope": "(source.c | source.c++ | source.objc | source.objc++) - comment - string",
-			"pattern": "(?<!\\.|\\[|\\(|,|@)\\b([a-zA-Z]*)",
+			"pattern": "(?<!\\.|\\[|\\(|,|@)\\b([a-zA-Z]+)",
 			"completionCaptureIndex": 1,
 			"completionSetNames": [
 				"c.keywords.control"
@@ -314,7 +314,7 @@
 		{
 			"description": "Non-control keywords",
 			"scope": "(source.c | source.c++ | source.objc | source.objc++) - comment - string",
-			"pattern": "(?<!\\.|@)\\b([a-zA-Z]*)",
+			"pattern": "(?<!\\.|@)\\b([a-zA-Z]+)",
 			"completionCaptureIndex": 1,
 			"completionSetNames": [
 				"c.keywords.structures",

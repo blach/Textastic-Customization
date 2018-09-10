@@ -641,7 +641,7 @@
 		{
 			"description": "Control keywords",
 			"scope": "source.js - comment - string",
-			"pattern": "(?<!\\.|\\[|\\(|,)\\b([a-zA-Z]*)",
+			"pattern": "(?<!\\.|\\[|\\(|,)\\b([a-zA-Z]+)",
 			"completionCaptureIndex": 1,
 			"completionSetNames": [
 				"js.keywords.control"
@@ -659,7 +659,7 @@
 		{
 			"description": "Non-control keywords",
 			"scope": "source.js - comment - string",
-			"pattern": "(?<!\\.)\\b([a-zA-Z]*)",
+			"pattern": "(?<!\\.)\\b([a-zA-Z]+)",
 			"completionCaptureIndex": 1,
 			"completionSetNames": [
 				"js.keywords"
@@ -668,7 +668,7 @@
 		{
 			"description": "Variables and functions",
 			"scope": "source.js - comment - string",
-			"pattern": "(?<!\\.)\\b([a-zA-Z]*)",
+			"pattern": "(?<!\\.)\\b([a-zA-Z]+)",
 			"completionCaptureIndex": 1,
 			"completionSetNames": [
 				"js.functions",

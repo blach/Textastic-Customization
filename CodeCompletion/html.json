@@ -1158,7 +1158,7 @@
 		{
 			"description": "HTML Tag Completion",
 			"scope": "text.html - source - comment - string",
-			"pattern": "<([a-zA-Z0-9]*)(?!/)",
+			"pattern": "<([a-zA-Z0-9]*)",
 			"completionCaptureIndex": 1,
 			"completionSetNames": [
 				"html.tags.with-newline",
