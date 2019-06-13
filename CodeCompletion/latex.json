@@ -1,0 +1,1693 @@
+{
+	"description": "Textastic Code Completion for LaTeX",
+	"uuid": "94B14448-A37C-48AF-8BD9-F5B532FFEC99",
+
+	"completionSets": [
+		// LaTeX2e unofficial reference manual http://latexref.xyz/
+		{
+			"name": "latex.commands",
+			"strings": [
+				"!",
+				"\"",
+				"#",
+				"$",
+				"%",
+				"&",
+				"'",
+				"*",
+				"+",
+				",",
+				"-",
+				".",
+				"/",
+				":",
+				";",
+				"<",
+				"=",
+				">",
+				"@",
+				"@beginparpenalty",
+				"@endparpenalty",
+				"@fnsymbol",
+				"@ifstar",
+				"@itempenalty",
+				"@startsection",
+				"\\",
+				"^",
+				"^{}",
+				"_",
+				"`",
+
+				"a",
+				"AA",
+				"aa",
+				"acute",
+				{
+					"string": "addcontentsline",
+					"append": "{${1:extension}}{${2:unit}}{${3:text}}$0"
+				},
+				{
+					"string": "address",
+					"append": "{$1}$0"
+				},
+				{
+					"string": "addtocontents",
+					"append": "{${1:extension}}{${2:text}}$0"
+				},
+				{
+					"string": "addtocounter",
+					"append": "{${1:counter}}{${2:value}}$0"
+				},
+				{
+					"string": "addtolength",
+					"append": "{${1:length}}{${2:amount}}$0"
+				},
+				{
+					"string": "addvspace",
+					"append": "{${1:length}}$0"
+				},
+				"AE",
+				"ae",
+				"aleph",
+				"alpha",
+				{
+					"string": "alph",
+					"append": "{${1:counter}}$0"
+				},
+				{
+					"string": "Alph",
+					"append": "{${1:counter}}$0"
+				},
+				"alsoname",
+				"amalg",
+				"and",
+				"angle",
+				"appendix",
+				"approx",
+				{
+					"string": "arabic",
+					"append": "{${1:counter}}$0"
+				},
+				"arccos",
+				"arcsin",
+				"arctan",
+				"arg",
+				"arraycolsep",
+				"arrayrulewidth",
+				"arraystretch",
+				"ast",
+				"asymp",
+				{
+					"string": "AtBeginDocument",
+					"append": "{${1:code}}$0"
+				},
+				{
+					"string": "AtBeginDvi",
+					"append": "{${1:specials}}$0"
+				},
+				{
+					"string": "AtEndDocument",
+					"append": "{${1:code}}$0"
+				},
+				{
+					"string": "AtEndOfClass",
+					"append": "{${1:code}}$0"
+				},
+				{
+					"string": "AtEndOfPackage",
+					"append": "{${1:code}}$0"
+				},
+				{
+					"string": "author",
+					"append": "{$1}$0"
+				},
+
+				"b",
+				"backmatter",
+				"backslash",
+				"bar",
+				"baselineskip",
+				"baselinestretch",
+				{
+					"string": "begin",
+					"append": "{${1:environment}}$0"
+				},
+				"beta",
+				"bf",
+				"bfseries",
+				{
+					"string": "bibitem",
+					"append": "[${1:label}]{${2:key}}$0"
+				},
+				{
+					"string": "bibliography",
+					"append": "{${1:bibfiles}}$0"
+				},
+				{
+					"string": "bibliographystyle",
+					"append": "{${1:bibstyle}}$0"
+				},
+				"bigcap",
+				"bigcirc",
+				"bigcup",
+				"bigodot",
+				"bigoplus",
+				"bigotimes",
+				"bigskip",
+				"bigskipamount",
+				"bigsqcup",
+				"bigtriangledown",
+				"bigtriangleup",
+				"biguplus",
+				"bigvee",
+				"bigwedge",
+				"bmod",
+				"boldmath",
+				"bot",
+				"bottomfraction",
+				"bowtie",
+				"Box",
+				"breve",
+				"bullet",
+
+				"c",
+				"cal",
+				"cap",
+				"capitalacute",
+				"capitalbreve",
+				"capitalcaron",
+				"capitalcedilla",
+				"capitalcircumflex",
+				"capitaldieresis",
+				"capitaldotaccent",
+				"capitalgrave",
+				"capitalhungarumlaut",
+				"capitalmacron",
+				"capitalnewtie",
+				"capitalogonek",
+				"capitalring",
+				"capitaltie",
+				"capitaltilde",
+				"caption",
+				"cc",
+				"cdot",
+				"cdots",
+				"centering",
+				{
+					"string": "chapter",
+					"append": "{${1:title}}$0"
+				},
+				"check",
+				{
+					"string": "CheckCommand",
+					"append": "{${1:command}}[${2:number}][${3:default}}]{${4:definition}}$0"
+				},
+				{
+					"string": "CheckCommand*",
+					"append": "{${1:command}}[${2:number}][${3:default}}]{${4:definition}}$0"
+				},
+				"chi",
+				"circ",
+				"circle",
+				{
+					"string": "cite",
+					"append": "[${1:subcite}]{${2:keys}}$0"
+				},
+				{
+					"string": "ClassError",
+					"append": "{${1:class}}{${2:error}}{${3:help}}$0"
+				},
+				{
+					"string": "ClassInfo",
+					"append": "{${1:class}}{${2:info}}$0"
+				},
+				{
+					"string": "ClassInfoNoLine",
+					"append": "{${1:class}}{${2:info}}$0"
+				},
+				{
+					"string": "ClassWarning",
+					"append": "{${1:class}}{${2:warning}}$0"
+				},
+				{
+					"string": "ClassWarningNoLine",
+					"append": "{${1:class}}{${2:warning}}$0"
+				},
+				"cleardoublepage",
+				"clearpage",
+				"cline",
+				"closing",
+				"clubsuit",
+				"colon",
+				"columnsep",
+				"columnseprule",
+				"columnwidth",
+				"complement",
+				"cong",
+				"contentsline",
+				"coprod",
+				"copyright",
+				"cos",
+				"cosh",
+				"cot",
+				"coth",
+				"csc",
+				"cup",
+				"CurrentOption",
+
+				"d",
+				"dag",
+				"dagger",
+				"dashbox",
+				"dashv",
+				{
+					"string": "date",
+					"append": "{${1:text}}$0"
+				},
+				"day",
+				"dblfloatpagefraction",
+				"dblfloatsep",
+				"dbltextfloatsep",
+				"dbltopfraction",
+				"dbltopnumber",
+				"ddag",
+				"ddagger",
+				"ddot",
+				"ddots",
+				{
+					"string": "DeclareGraphicsExtensions",
+					"append": "{${1:.png,.pdf,.mps,.jpeg,.jbig2,.jb2}}$0"
+				},
+				{
+					"string": "DeclareGraphicsRule",
+					"append": "{${1:entension}}{${2:type}}{${3:size file-extension}}{${4:command}}$0"
+				},
+				{
+					"string": "DeclareOption",
+					"append": "{${1:option}}{${2:code}}$0"
+				},
+				{
+					"string": "DeclareOption*",
+					"append": "{${1:option}}{${2:code}}$0"
+				},
+				{
+					"string": "DeclareRobustCommand",
+					"append": "{${1:command}}[${2:number}]{${3:default}}{${4:definition}}$0"
+				},
+				{
+					"string": "DeclareRobustCommand*",
+					"append": "{${1:command}}[${2:number}]{${3:default}}{${4:definition}}$0"
+				},
+				"deg",
+				"Delta",
+				"delta",
+				"det",
+				"DH",
+				"dh",
+				"Diamond",
+				"diamond",
+				"diamondsuit",
+				"dim",
+				"displaystyle",
+				"div",
+				"dj",
+				"DJ",
+				{
+					"string": "documentclass",
+					"append": "[${1:options}]{${2:class}}$0"
+				},
+				"dot",
+				"doteq",
+				"dotfill",
+				"dots",
+				"doublerulesep",
+				"downarrow",
+				"Downarrow",
+				"ell",
+				{
+					"string": "emph",
+					"append": "{$1}$0"
+				},
+				"empty",
+				"emptyset",
+				"encl",
+				{
+					"string": "end",
+					"append": "{${1:environment}}$0"
+				},
+				"endinput",
+				"enlargethispage",
+				"enspace",
+				"enumi",
+				"enumii",
+				"enumiii",
+				"enumiv",
+				"epsilon",
+				"equiv",
+				"eta",
+				"evensidemargin",
+				{
+					"string": "ExecuteOptions",
+					"append": "{${1:options}}$0"
+				},
+				"exists",
+				"exp",
+				"extracolsep",
+
+				"fbox",
+				"fboxrule",
+				"fboxsep",
+				"fill",
+				"flat",
+				"floatpagefraction",
+				"floatsep",
+				"flushbottom",
+				{
+					"string": "fnsymbol",
+					"append": "{${1:counter}}$0"
+				},
+				{
+					"string": "fontencoding",
+					"append": "{${1:encoding}}$0"
+				},
+				{
+					"string": "fontfamily",
+					"append": "{${1:family}}$0"
+				},
+				{
+					"string": "fontseries",
+					"append": "{${1:series}}$0"
+				},
+				{
+					"string": "fontshape",
+					"append": "{${1:shape}}$0"
+				},
+				{
+					"string": "fontsize",
+					"append": "{${1:size}}{${2:skip}}$0"
+				},
+				{
+					"string": "footnote",
+					"append": "[${1:number}]{${2:text}}$0"
+				},
+				{
+					"string": "footnotemark",
+					"append": "[${1:number}]$0"
+				},
+				"footnoterule",
+				"footnotesep",
+				"footnotesize",
+				"footnotetext",
+				"footskip",
+				"forall",
+				{
+					"string": "frac",
+					"append": "{${1:numerator}}{${2:denominator}}$0"
+				},
+				{
+					"string": "frame",
+					"append": "{${1:cotents}}$0"
+				},
+				"framebox",
+				"frenchspacing",
+				"frontmatter",
+				"frown",
+				"fussy",
+
+				"Gamma",
+				"gamma",
+				"gcd",
+				"ge",
+				"geq",
+				"gets",
+				"gg",
+				"gls",
+				"graphicspath",
+				"graphpaper",
+				"grave",
+				"guillemotleft",
+				"guillemotright",
+				"guilsinglleft",
+				"guilsinglright",
+
+				"H",
+				"hat",
+				"hbar",
+				"headheight",
+				"headsep",
+				"heartsuit",
+				"hfill",
+				"hline",
+				"hom",
+				"hookleftarrow",
+				"hookrightarrow",
+				"hrulefill",
+				"hsize",
+				{
+					"string": "hspace",
+					"append": "{${1:length}}$0"
+				},
+				{
+					"string": "hspace*",
+					"append": "{${1:length}}$0"
+				},
+				"hss",
+				"huge",
+				"Huge",
+				"hyphenation",
+
+				"i",
+				"iff",
+				{
+					"string": "IfFileExists",
+					"append": "{${1:file}}{${2:true-code}}{${3:false-code}}$0"
+				},
+				"ignorespaces",
+				"ignorespacesafterend",
+				"ij",
+				"IJ",
+				"Im",
+				"imath",
+				"in",
+				{
+					"string": "include",
+					"append": "{${1:file}}$0"
+				},
+				{
+					"string": "includegraphics",
+					"append": "[${1:key-values}]{${2:file}}$0"
+				},
+				{
+					"string": "includegraphics*",
+					"append": "[${1:key-values}]{${2:file}}$0"
+				},
+				{
+					"string": "includeonly",
+					"append": "{${1:file}}$0"
+				},
+				"indent",
+				"index",
+				"indexentry",
+				"inf",
+				"infty",
+				{
+					"string": "input",
+					"append": "{${1:file}}$0"
+				},
+				{
+					"string": "InputIfFileExists",
+					"append": "{${1:file}}{${2:true-code}}{${3:false-code}}$0"
+				},
+				"int",
+				"intextsep",
+				"iota",
+				"it",
+				{
+					"string": "item",
+					"append": "[${1:label]$0"
+				},
+				"itemindent",
+				"itemsep",
+				"itshape",
+
+				"j",
+				"jmath",
+				"Join",
+
+				"k",
+				"kappa",
+				"ker",
+				"kill",
+
+				"L",
+				"l",
+				{
+					"string": "label",
+					"append": "{${1:key}}$0"
+				},
+				"labelenumi",
+				"labelenumii",
+				"labelenumiii",
+				"labelenumiv",
+				"labelitemi",
+				"labelitemii",
+				"labelitemiii",
+				"labelitemiv",
+				"labelsep",
+				"labelwidth",
+				"Lambda",
+				"lambda",
+				"land",
+				"langle",
+				"large",
+				"Large",
+				"LARGE",
+				"LaTeX",
+				"LaTeXe",
+				"lbrace",
+				"lbrack",
+				"lceil",
+				"ldots",
+				"le",
+				"leadsto",
+				"left",
+				"Leftarrow",
+				"leftarrow",
+				"lefteqn",
+				"leftharpoondown",
+				"leftharpoonup",
+				"leftmargin",
+				"leftmargini",
+				"leftmarginii",
+				"leftmarginiii",
+				"leftmarginiv",
+				"leftmarginv",
+				"leftmarginvi",
+				"Leftrightarrow",
+				"leftrightarrow",
+				"leq",
+				"lfloor",
+				"lg",
+				"lhd",
+				"lim",
+				"liminf",
+				"limsup",
+				"line",
+				"linebreak",
+				"linespread",
+				"linethickness",
+				"linewidth",
+				"listoffigures",
+				"listoftables",
+				"listparindent",
+				"ll",
+				"ln",
+				"lnot",
+				{
+					"string": "LoadClass",
+					"append": "[${1:options}]{${2:class}}[${3:release-date}]$0"
+				},
+				{
+					"string": "LoadClassWithOptions",
+					"append": "{${1:class}}[${2:release-date}]$0"
+				},
+				{
+					"string": "location",
+					"append": "{${1:text}}$0"
+				},
+				"log",
+				"longleftarrow",
+				"longleftrightarrow",
+				"longmapsto",
+				"longrightarrow",
+				"lor",
+				"lq",
+
+				"mainmatter",
+				"makebox",
+				"makeglossary",
+				"makeindex",
+				"makelabel",
+				"makelabels",
+				"maketitle",
+				"mapsto",
+				"marginpar",
+				"marginparpush",
+				"marginparsep",
+				"marginparwidth",
+				"marginsep",
+				{
+					"string": "markboth",
+					"append": "{${1:left-head}}{${2:right-head}}$0"
+				},
+				{
+					"string": "markright",
+					"append": "{${1:right}}$0"
+				},
+				{
+					"string": "mathbf",
+					"append": "{$1}$0"
+				},
+				{
+					"string": "mathcal",
+					"append": "{$1}$0"
+				},
+				"mathdollar",
+				{
+					"string": "mathnormal",
+					"append": "{$1}$0"
+				},
+				"mathparagraph",
+				"mathring",
+				"mathsection",
+				{
+					"string": "mathsf",
+					"append": "{$1}$0"
+				},
+				"mathsterling",
+				{
+					"string": "mathtt",
+					"append": "{$1}$0"
+				},
+				"mathunderscore",
+				"mathversion",
+				"mathversion",
+				"max",
+				"mbox",
+				"mdseries",
+				"medskip",
+				"medskipamount",
+				"medspace",
+				"mho",
+				"mid",
+				"min",
+				"models",
+				"month",
+				"mp",
+				"mu",
+				"multicolumn",
+				"multiput",
+
+				"nambla",
+				"name",
+				"natural",
+				"ne",
+				"nearrow",
+				{
+					"string": "NeedsTeXFormat",
+					"append": "{${1:format}}[${2:format-date}]$0"
+				},
+				"neg",
+				"negthinspace",
+				"neq",
+				"newcommand",
+				"newcounter",
+				"newenvironment",
+				"newfont",
+				"newglossaryentry",
+				"newlength",
+				"newline",
+				"NEWLINE",
+				"newpage",
+				"newsavebox",
+				{
+					"string": "newtheorem",
+					"append": "{${1:name}}{${2:title}}$0"
+				},
+				"newtie",
+				"ng",
+				"NG",
+				"ni",
+				"nocite",
+				"nocorr",
+				"nocorrlist",
+				"nofiles",
+				"noindent",
+				"nolinebreak",
+				"nonfrenchspacing",
+				"nonumber",
+				"nopagebreak",
+				"normalfont",
+				"normalmarginpar",
+				"normalsfcodes",
+				"normalsize",
+				"not",
+				"notin",
+				"nu",
+				"nwarrow",
+
+				"O",
+				"o",
+				"obeycr",
+				"oddsidemargin",
+				"odot",
+				"OE",
+				"oe",
+				"oint",
+				"oldstylenums",
+				"Omega",
+				"omega",
+				"ominus",
+				"onecolumn",
+				"opening",
+				"oplus",
+				"OptionNoteUsed",
+				"oslash",
+				"otimes",
+				"oval",
+				{
+					"string": "overbrace",
+					"append": "{${1:math}}$0"
+				},
+				{
+					"string": "overline",
+					"append": "{${1:text}}$0"
+				},
+				"owns",
+
+				"P",
+				{
+					"string": "PackageError",
+					"append": "{${1:package}}{${2:error}}{${3:help}}$0"
+				},
+				{
+					"string": "PackageInfo",
+					"append": "{${1:package}}{${2:info}}$0"
+				},
+				{
+					"string": "PackageInfoNoLine",
+					"append": "{${1:package}}{${2:info}}$0"
+				},
+				{
+					"string": "PackageWarning",
+					"append": "{${1:package}}{${2:warning}}$0"
+				},
+				{
+					"string": "PackageWarningNoLine",
+					"append": "{${1:package}}{${2:warning}}$0"
+				},
+				"pagebreak",
+				"pagenumbering",
+				"pageref",
+				"pagestyle",
+				"paperheight",
+				"paperwidth",
+				"par",
+				"paragraph",
+				"parallel",
+				"parbox",
+				"parindent",
+				"parsep",
+				"parskip",
+				"part",
+				"partial",
+				"partopsep",
+				{
+					"string": "PassOptionsToClass",
+					"append": "{${1:options}}{${2:class}}$0"
+				},
+				{
+					"string": "PassOptionsToPackage",
+					"append": "{${1:options}}{${2:package}}$0"
+				},
+				"pdfpageheight",
+				"pdfpagewidth",
+				"perp",
+				"phi",
+				"Pi",
+				"pi",
+				"pm",
+				"pmod",
+				"poptabs",
+				"pounds",
+				"Pr",
+				"prec",
+				"preceq",
+				"prime",
+				"printglossaries",
+				"printindex",
+				"ProcessOptions",
+				"prod",
+				"propto",
+				"protect",
+				"providecommand",
+				{
+					"string": "ProvidesClass",
+					"append": "{${1:class}}[${2:release-date}]$0"
+				},
+				{
+					"string": "ProvidesPackage",
+					"append": "{${1:package}}[${2:release-date}]$0"
+				},
+				"ps",
+				"Psi",
+				"psi",
+				"pushtabs",
+				"put",
+
+				"qbezier",
+				"qquad",
+				"quad",
+				"quotedblbase",
+				"quotesinglbase",
+
+				"r",
+				"raggedbottom",
+				"raggedleft",
+				"raggedright",
+				"raisebox",
+				"rangle",
+				"rbrace",
+				"rbrack",
+				"rceil",
+				"Re",
+				{
+					"string": "ref",
+					"append": "{${1:key}}$0"
+				},
+				"reflectbox",
+				"refstepcounter",
+				"renewenvironment",
+				{
+					"string": "RequirePackage",
+					"append": "[${1:options}]{${2:package}}[${3:release-date}]$0"
+				},
+				{
+					"string": "RequirePackageWithOptions",
+					"append": "{${1:package}}[${2:release-date}]$0"
+				},
+				"resizebox",
+				"restorecr",
+				"restriction",
+				"revemptyset",
+				"reversemarginpar",
+				"rfloor",
+				"rhd",
+				"rho",
+				"right",
+				"rightarrow",
+				"Rightarrow",
+				"rightharpoondown",
+				"rightharpoonup",
+				"rightleftharpoons",
+				"rightmargin",
+				"rm",
+				"rmfamily",
+				{
+					"string": "roman",
+					"append": "{${1:counter}}$0"
+				},
+				{
+					"string": "Roman",
+					"append": "{${1:counter}}$0"
+				},
+				"rotatebox",
+				"rq",
+				"rule",
+
+				"S",
+				"savebox",
+				"sbox",
+				"sc",
+				"scalebox",
+				"scshape",
+				"searrow",
+				"sec",
+				{
+					"string": "section",
+					"append": "{${1:title}}$0"
+				},
+				"seename",
+				"selectfont",
+				"setlength",
+				"setminus",
+				"settodepth",
+				"settowidth",
+				"sf",
+				"sfamily",
+				"sharp",
+				"shortstack",
+				"Sigma",
+				"sigma",
+				"signature",
+				"sim",
+				"simeq",
+				"sin",
+				"sinh",
+				"sl",
+				"sloppy",
+				"slshape",
+				"small",
+				"smallint",
+				"smallskip",
+				"smallskipamount",
+				"smile",
+				"SPACE",
+				"spacefactor",
+				"spadesuit",
+				"sqcap",
+				"sqcup",
+				"sqrt",
+				"sqsubset",
+				"sqsubseteq",
+				"sqsupset",
+				"sqsupseteq",
+				"SS",
+				"ss",
+				"stackrel",
+				"star",
+				"stepcounter",
+				"stop",
+				"strut",
+				"subparagraph",
+				{
+					"string": "subsection",
+					"append": "{${1:title}}$0"
+				},
+				"subset",
+				"subseteq",
+				{
+					"string": "subsubsection",
+					"append": "{${1:title}}$0"
+				},
+				"succ",
+				"succeq",
+				"sum",
+				"sup",
+				"suppressfloats",
+				"supset",
+				"supseteq",
+				"surd",
+				"swarrow",
+				"symbol",
+
+				"t",
+				"TAB",
+				"tabbingsep",
+				"tabcolsep",
+				"tableofcontents",
+				"tan",
+				"tanh",
+				"tau",
+				"telephone",
+				"TeX",
+				"textascendercompwordmark",
+				"textasciicircum",
+				"textasciitilde",
+				"textasteriskcentered",
+				"textbackslask",
+				"textbar",
+				"textbardble",
+				{
+					"string": "textbf",
+					"append": "{$1}$0"
+				},
+				"textbigcircle",
+				"textbraceleft",
+				"textbraceright",
+				"textbullet",
+				"textcapitalcompwordmark",
+				{
+					"string": "textcircled",
+					"append": "{${1:letter}}$0"
+				},
+				"textcompwordmark",
+				"textcopyright",
+				"textdagger",
+				"textdaggerdbl",
+				"textdollar",
+				"textellipsis",
+				"textemdash",
+				"textendash",
+				"texteuro",
+				"textexclamdown",
+				"textfloatsep",
+				"textfraction",
+				"textgreater",
+				"textheight",
+				{
+					"string": "textit",
+					"append": "{$1}$0"
+				},
+				"textleftarrow",
+				"textless",
+				{
+					"string": "textmd",
+					"append": "{$1}$0"
+				},
+				{
+					"string": "textnormal",
+					"append": "{$1}$0"
+				},
+				"textordfeminine",
+				"textordmasculine",
+				"textparagraph",
+				"textperiodcentered",
+				"textquestiondown",
+				"textquotedblleft",
+				"textquotedblright",
+				"textquoteleft",
+				"textquoteright",
+				"textquotesingle",
+				"textquotestraightbase",
+				"textquotestraightdblbase",
+				"textregistered",
+				"textrightarrow",
+				{
+					"string": "textrm",
+					"append": "{$1}$0"
+				},
+				{
+					"string": "textsc",
+					"append": "{$1}$0"
+				},
+				"textsection",
+				{
+					"string": "textsf",
+					"append": "{$1}$0"
+				},
+				{
+					"string": "textsl",
+					"append": "{$1}$0"
+				},
+				"textsterling",
+				"textthreequartersemdash",
+				"texttrademark",
+				{
+					"string": "texttt",
+					"append": "{$1}$0"
+				},
+				"texttwelveudash",
+				"textunderscore",
+				{
+					"string": "textup",
+					"append": "{$1}$0"
+				},
+				"textvisiblespace",
+				"textwidth",
+				"TH",
+				"th",
+				{
+					"string": "thanks",
+					"append": "{${1:text}}$0"
+				},
+				"theta",
+				"thicklines",
+				"thickspace",
+				"thinlines",
+				"thinspace",
+				"thinpagestyle",
+				"tilde",
+				"times",
+				"tiny",
+				{
+					"string": "title",
+					"append": "{${1:text}}$0"
+				},
+				"to",
+				"today",
+				"top",
+				"topfraction",
+				"topmargin",
+				"topsep",
+				"topskip",
+				"triangle",
+				"triangleleft",
+				"triangleright",
+				"tt",
+				"ttfamily",
+				"twocolumn",
+				"typein",
+				"typeout",
+
+				"u",
+				"unbolmath",
+				"underbar",
+				{
+					"string": "underbrace",
+					"append": "{${1:math}}$0"
+				},
+				{
+					"string": "underline",
+					"append": "{${1:text}}$0"
+				},
+				"unitlength",
+				"unlhd",
+				"unrhd",
+				"Uparrow",
+				"uparrow",
+				"Updownarrow",
+				"updownarrow",
+				"upharpoonright",
+				"uplus",
+				"upshape",
+				"Upsilon",
+				"upsilon",
+				"usebox",
+				{
+					"string": "usecounter",
+					"append": "{${1:counter}}$0"
+				},
+				{
+					"string": "usefont",
+					"append": "{${1:encoding}}{${2:family}}{${3:series}}{${4:shape}}$0"
+				},
+				{
+					"string": "usepackage",
+					"append": "{${1:packages}}$0"
+				},
+
+				"v",
+				"value",
+				"vanothing",
+				"varepsilon",
+				"varphi",
+				"varpi",
+				"varrho",
+				"varsigma",
+				"vartheta",
+				"vdash",
+				"vdots",
+				"vec",
+				"vector",
+				"vee",
+				"verb",
+				"Vert",
+				"vert",
+				"vfill",
+				"vline",
+				{
+					"string": "vspace",
+					"append": "{${1:length}}$0"
+				},
+
+				"wedge",
+				"widehat",
+				"widetilde",
+				"wp",
+				"wr",
+				"Xi",
+				"xi",
+				"year",
+				"zeta",
+
+				"{",
+				"|",
+				"}",
+				"~",
+				"~{}"
+			]
+		},
+
+		{
+			"name": "latex.commands.begin.environments",
+			"defaultAppend": "",
+			"strings": [
+				"abstract",
+				"array",
+				"center",
+				"description",
+				"displaymath",
+				"document",
+				"enumerate",
+				"eqnarray",
+				"equation",
+				"figure",
+				"flushleft",
+				"flushright",
+				"itemize",
+				"list",
+				"lrbox",
+				"math",
+				"minipage",
+				"picture",
+				"quotation",
+				"sloppypar",
+				"tabbing",
+				"table",
+				"tabular",
+				"thebibliography",
+				"theorem",
+				"titlepage",
+				"trivlist",
+				"verbatim",
+				"verse"
+			]
+		},
+		{
+			"name": "latex.commands.end.environments",
+			"defaultAppend": "",
+			"strings": [
+				"abstract",
+				"array",
+				"center",
+				"description",
+				"displaymath",
+				"document",
+				"enumerate",
+				"eqnarray",
+				"equation",
+				"figure",
+				"flushleft",
+				"flushright",
+				"itemize",
+				"list",
+				"lrbox",
+				"math",
+				"minipage",
+				"picture",
+				"quotation",
+				"sloppypar",
+				"tabbing",
+				"table",
+				"tabular",
+				"thebibliograohy",
+				"theorem",
+				"titlepage",
+				"trivlist",
+				"verbatim",
+				"verse"
+			]
+		},
+
+		// A selection of commands from the amsmath packackage
+		{
+			"name": "latex.commands.amsmath",
+			"strings": [
+				// Operator names
+				{
+					"string": "DeclareMathOperator",
+					"append": "{${1:command}}{${2:code}}$0"
+				},
+				{
+					"string": "operatorname",
+					"append": "{${1:name}}$0"
+				},
+				{
+					"string": "text",
+					"append": "{$1}$0"
+				},
+				// Multiple integral signs
+				"iint",
+				"iiint",
+				"iiiint",
+				"idotsint",
+				// Fonts
+				{
+					"string": "mathbb",
+					"append": "{$1}$0"
+				},
+				{
+					"string": "mathfrak",
+					"append": "{$1}$0"
+				},
+				{
+					"string": "mathscr",
+					"append": "{$1}$0"
+				},
+			]
+		},
+
+		{
+			"name": "latex.commands.begin.environments.amsmath",
+			"strings": [
+				"equation*", 
+				"align",
+				"align*",
+				"gather",
+				"gather*",
+				"alignat",
+				"alignat*",
+				"multiline",
+				"multiline*",
+				"flalign",
+				"flalign*",
+				"split",
+				"CD"
+			]
+		},
+		{
+			"name": "latex.commands.end.environments.amsmath",
+			"strings": [
+				"equation*", 
+				"align",
+				"align*",
+				"gather",
+				"gather*",
+				"alignat",
+				"alignat*",
+				"multiline",
+				"multiline*",
+				"flalign",
+				"flalign*",
+				"split",
+				"CD"
+			]
+		},
+
+
+		// A selection of commands from the physics package
+		{
+			"name": "latex.commands.physics",
+			"strings": [
+				// Automatic bracing
+				"qty",
+				{
+					"string": "abs",
+					"append": "{$1}$0"
+				},
+				{
+					"string": "norm",
+					"append": "{$1}$0"
+				},
+				{
+					"string": "eval",
+					"append": "_{$1}^{$2}$0"
+				},
+				{
+					"string": "order",
+					"append": "{$1}$0"
+				},
+				{
+					"string": "comm",
+					"append": "{$1}{$2}$0"
+				},
+				{
+					"string": "anticomm",
+					"append": "{$1}{$2}$0"
+				},
+
+				// Vector notation
+				{
+					"string": "vb",
+					"append": "{$1}$0"
+				},
+				{
+					"string": "vb*",
+					"append": "{$1}$0"
+				},
+				{
+					"string": "va",
+					"append": "{$1}$0"
+				},
+				{
+					"string": "va*",
+					"append": "{$1}$0"
+				},
+				{
+					"string": "vu",
+					"append": "{$1}$0"
+				},
+				{
+					"string": "vu*",
+					"append": "{$1}$0"
+				},
+				{
+					"string": "dotproduct",
+					"append": "{$1}$0"
+				},
+				{
+					"string": "grad",
+					"append": "{$1}$0"
+				},
+				{
+					"string": "div",
+					"append": "{$1}$0"
+				},
+				{
+					"string": "curl",
+					"append": "{$1}$0"
+				},
+				{
+					"string": "laplacian",
+					"append": "{$1}$0"
+				},
+
+				// Operators
+				{
+					"string": "sin",
+					"append": "[${1:pwr}](${2:var})$0"
+				},
+				{
+					"string": "cos",
+					"append": "[${1:pwr}](${2:var})$0"
+				},
+				{
+					"string": "tan",
+					"append": "[${1:pwr}](${2:var})$0"
+				},
+				{
+					"string": "csc",
+					"append": "[${1:pwr}](${2:var})$0"
+				},
+				{
+					"string": "sec",
+					"append": "[${1:pwr}](${2:var})$0"
+				},
+				{
+					"string": "cot",
+					"append": "[${1:pwr}](${2:var})$0"
+				},
+				{
+					"string": "sinh",
+					"append": "[${1:pwr}](${2:var})$0"
+				},
+				{
+					"string": "cosh",
+					"append": "[${1:pwr}](${2:var})$0"
+				},
+				{
+					"string": "tanh",
+					"append": "[${1:pwr}](${2:var})$0"
+				},
+				{
+					"string": "csch",
+					"append": "[${1:pwr}](${2:var})$0"
+				},
+				{
+					"string": "sech",
+					"append": "[${1:pwr}](${2:var})$0"
+				},
+				{
+					"string": "coth",
+					"append": "[${1:pwr}](${2:var})$0"
+				},
+				{
+					"string": "arcsin",
+					"append": "[${1:pwr}](${2:var})$0"
+				},
+				{
+					"string": "arccos",
+					"append": "[${1:pwr}](${2:var})$0"
+				},
+				{
+					"string": "arctan",
+					"append": "[${1:pwr}](${2:var})$0"
+				},
+				{
+					"string": "arccsc",
+					"append": "[${1:pwr}](${2:var})$0"
+				},
+				{
+					"string": "arcsec",
+					"append": "[${1:pwr}](${2:var})$0"
+				},
+				{
+					"string": "arccot",
+					"append": "[${1:pwr}](${2:var})$0"
+				},
+
+				{
+					"string": "exp",
+					"append": "($1)$0"
+				},
+				{
+					"string": "log",
+					"append": "($1)$0"
+				},
+				{
+					"string": "ln",
+					"append": "($1)$0"
+				},
+				{
+					"string": "det",
+					"append": "($1)$0"
+				},
+				{
+					"string": "Pr",
+					"append": "($1)$0"
+				},
+
+				{
+					"string": "tr",
+					"append": "($1)$0"
+				},
+				{
+					"string": "Tr",
+					"append": "($1)$0"
+				},
+				{
+					"string": "rank",
+					"append": "($1)$0"
+				},
+				{
+					"string": "erf",
+					"append": "($1)$0"
+				},
+				{
+					"string": "Res",
+					"append": "($1)$0"
+				},
+				{
+					"string": "pv",
+					"append": "{$1}$0"
+				},
+				{
+					"string": "Re",
+					"append": "($1)$0"
+				},
+				{
+					"string": "Im",
+					"append": "($1)$0"
+				},
+
+				// Derivatives
+				"dd",
+				{
+					"string": "dv",
+					"append": "[${1:pwr}]{${2:fn}}{${3:var}}$0"
+				},
+				{
+					"string": "dv*",
+					"append": "[${1:pwr}]{${2:fn}}{${3:var}}$0"
+				},
+				{
+					"string": "pdv",
+					"append": "[${1:pwr}]{${2:fn}}{${3:var}}$0"
+				},
+				{
+					"string": "pdv*",
+					"append": "[${1:pwr}]{${2:fn}}{${3:var}}$0"
+				},
+				"var",
+				{
+					"string": "fdv",
+					"append": "[${1:pwr}]{${2:fn}}{${3:var}}$0"
+				},
+				{
+					"string": "fdv*",
+					"append": "[${1:pwr}]{${2:fn}}{${3:var}}$0"
+				},
+
+				// Dirac notation
+				{
+					"string": "ket",
+					"append": "{$1}$0"
+				},
+				{
+					"string": "ket*",
+					"append": "{$1}$0"
+				},
+				{
+					"string": "bra",
+					"append": "{$1}$0"
+				},
+				{
+					"string": "bra*",
+					"append": "{$1}$0"
+				},
+				{
+					"string": "braket",
+					"append": "{$1}{$2}$0"
+				},
+				{
+					"string": "braket*",
+					"append": "{$1}{$2}$0"
+				},
+				{
+					"string": "dyad",
+					"append": "{$1}{$2}$0"
+				},
+				{
+					"string": "dyad*",
+					"append": "{$1}{$2}$0"
+				},
+				{
+					"string": "expval",
+					"append": "{${1:op}}{${2:state}}$0"
+				},
+				{
+					"string": "matrixel",
+					"append": "{${1:bra}}{${2:op}}{${3:ket}}$0"
+				},
+
+				// Matrix
+				"mqty",
+				"smqty",
+				"mdet",
+				"imat",
+				{
+					"string": "xmat",
+					"append": "{${1:var}}{${2:col}}{${3:row}}$0"
+				},
+				{
+					"string": "xmat*",
+					"append": "{${1:mat}}{${2:col}}{${3:row}}$0"
+				},
+				{
+					"string": "zmat",
+					"append": "{${1:col}}{${2:row}}$0"
+				},
+				{
+					"string": "dmat",
+					"append": "{${1:a,b,c}}$0"
+				},
+				{
+					"string": "admat",
+					"append": "{${1:a,b,c}}$0"
+				},
+			]
+		},
+
+		// A selection of packages
+		{
+			"name": "latex.commands.usepackage.packages",
+			"strings": [
+				"amsfonts",
+				"amsmath",
+				"amssymb",
+				"amsthm",
+				"beamer",
+				"bm",
+				"color",
+				"epsﬁg",
+				"esint",
+				"fancyhdr",
+				"geometry",
+				"graphicx",
+				"hyperref",
+				"import",
+				"isotope",
+				"jheppub",
+				"natbib",
+				"physics",
+				"siunitx",
+				"tikz",
+				"xfrac"
+			]
+		},
+	],
+
+	"contexts": [
+		{
+			"description": "LaTeX Command Completion",
+			"scope": "text.tex.latex",
+			"pattern": "(?<!\\\\)\\\\([a-zA-Z\\*]*)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"latex.commands",
+				"latex.commands.amsmath",
+				"latex.commands.physics"
+			]
+		},
+		{
+			"description": "LaTeX Environment Completion",
+			"scope": "text.tex.latex",
+			"pattern": "(?<!\\\\)\\\\([a-zA-Z\\*]*)\\{(.*)",
+			"completionCaptureIndex": 2,
+			"completionSetNames": [
+				"latex.commands.$1.environments",
+				"latex.commands.$1.environments.amsmath"
+			]
+		}, 
+		{
+			"description": "LaTeX Package Completion",
+			"scope": "text.tex.latex",
+			"pattern": "(?<!\\\\)\\\\([a-zA-Z\\*]*)(?:\\[.*\\])?\\{(.*)",
+			"completionCaptureIndex": 2,
+			"completionSetNames": [
+				"latex.commands.$1.packages"
+			]
+		}
+	]
+}
