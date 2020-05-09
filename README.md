@@ -29,11 +29,11 @@ Textastic templates are simple JSON files with the following format:
   * `fileExtension`: the file extension that is automatically added to the file name when the user selects this template
   * `snippet`: The snippet that is inserted after the file is created. Be sure to escape new line and tab characters with \n and \t. 
   
-        Always use tab characters for indentation - if necessary, Textastic will replace them with space characters depending on the current settings. 
+    Always use tab characters for indentation - if necessary, Textastic will replace them with space characters depending on the current settings. 
         
-        Have a look at the [TextMate manual entry on snippets](http://manual.macromates.com/en/snippets) for an overview of the snippet syntax. Textastic supports tab stops, placeholders, mirrors and transformations. 
+    Have a look at the [TextMate manual entry on snippets](http://manual.macromates.com/en/snippets) for an overview of the snippet syntax. Textastic supports tab stops, placeholders, mirrors and transformations. 
     
-        Currently, only the `$UUID` variable is supported. It automatically creates a new `uuid` and inserts it.
+    Currently, only the `$UUID` variable is supported. It automatically creates a new `uuid` and inserts it.
         
 ### Creating new templates
 
