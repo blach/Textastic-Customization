@@ -1282,6 +1282,10 @@
 					"append": "{$1}$0"
 				},
 				{
+					"string": "mathrm",
+					"append": "{$1}$0"
+				},
+				{
 					"string": "mathscr",
 					"append": "{$1}$0"
 				},
