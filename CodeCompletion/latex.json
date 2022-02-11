@@ -1181,7 +1181,7 @@
 
 		{
 			"name": "latex.commands.begin.environments",
-			"defaultAppend": "",
+			"defaultAppend": "}\n$0\n\\end{$COMPLETION",
 			"strings": [
 				"abstract",
 				"array",
@@ -1294,6 +1294,7 @@
 
 		{
 			"name": "latex.commands.begin.environments.amsmath",
+			"defaultAppend": "}\n$0\n\\end{$COMPLETION",
 			"strings": [
 				"equation*", 
 				"align",
@@ -1307,7 +1308,28 @@
 				"flalign",
 				"flalign*",
 				"split",
-				"CD"
+				"CD",
+				"subequations",
+				"aligned",
+				"alignedat",
+				"bmatrix",
+				"Bmatrix",
+				"cases",
+				"dcases",
+				"flalign",
+				"gathered",
+				"matrix",
+				"matrix*",
+				"multline",
+				"multlined",
+				"pmatrix",
+				"rcases",
+				"smallmatrix",
+				"smallmatrix*",
+				"split",
+				"subarray",
+				"vmatrix",
+				"Vmatrix"
 			]
 		},
 		{
@@ -1325,7 +1347,28 @@
 				"flalign",
 				"flalign*",
 				"split",
-				"CD"
+				"CD",
+				"subequations",
+				"aligned",
+				"alignedat",
+				"bmatrix",
+				"Bmatrix",
+				"cases",
+				"dcases",
+				"flalign",
+				"gathered",
+				"matrix",
+				"matrix*",
+				"multline",
+				"multlined",
+				"pmatrix",
+				"rcases",
+				"smallmatrix",
+				"smallmatrix*",
+				"split",
+				"subarray",
+				"vmatrix",
+				"Vmatrix"
 			]
 		},
 
