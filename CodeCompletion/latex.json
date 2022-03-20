@@ -431,7 +431,10 @@
 				"guilsinglright",
 
 				"H",
-				"hat",
+				{
+					"string": "hat",
+					"append": "{${1}}$0"
+				},
 				"hbar",
 				"headheight",
 				"headsep",
@@ -441,6 +444,7 @@
 				"hom",
 				"hookleftarrow",
 				"hookrightarrow",
+				"hphantom",
 				"hrulefill",
 				"hsize",
 				{
@@ -793,6 +797,7 @@
 				"pdfpageheight",
 				"pdfpagewidth",
 				"perp",
+				"phantom",
 				"phi",
 				"Pi",
 				"pi",
@@ -1156,6 +1161,7 @@
 				"vert",
 				"vfill",
 				"vline",
+				"vphantom",
 				{
 					"string": "vspace",
 					"append": "{${1:length}}$0"
@@ -1289,6 +1295,8 @@
 					"string": "mathscr",
 					"append": "{$1}$0"
 				},
+				// Misc
+				"eqref"
 			]
 		},
 
@@ -1687,7 +1695,7 @@
 				"beamer",
 				"bm",
 				"color",
-				"epsﬁg",
+				"epsfig",
 				"esint",
 				"fancyhdr",
 				"geometry",
@@ -1709,7 +1717,7 @@
 		{
 			"description": "LaTeX Command Completion",
 			"scope": "text.tex.latex",
-			"pattern": "(?<!\\\\)\\\\([a-zA-Z\\*]*)",
+			"pattern": "(?<!\\\\)\\\\([\\S]*)",
 			"completionCaptureIndex": 1,
 			"completionSetNames": [
 				"latex.commands",
