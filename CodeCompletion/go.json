@@ -1,0 +1,146 @@
+{
+	"description": "Textastic Code Completion for Go",
+	"uuid": "0E449C32-366F-49F4-80FC-030ADDD5A046",
+	
+	"completionSets": [
+		{
+			"name": "go.keywords.control",
+			"defaultAppend": "",
+			"strings": [
+				"return",
+				{ "string": "if", "append": " ${1:condition} {\n\t${0:statements}\n}" },
+				{ "string": "for", "append": " ${1:condition} {\n\t${0:statements}\n}" },
+				{ "string": "switch", "append": " ${1:expression} {\n${0:cases}\n}" },
+				{ "string": "select", "append": " {\n${0:cases}\n}" },
+				{ "string": "case", "append": " ${1:condition}:\n\t${0:statements}\n" },
+				{ "string": "default", "append": "\n\t${1:statements}\n" },
+				{ "string": "else", "append": " {\n\t$0\n}" }
+			]
+		},
+		{
+			"name": "go.keywords.control.else-if",
+			"defaultAppend": "",
+			"strings": [
+				{ "string": "else if", "append": " $1 {\n\t$0\n}" }
+			]
+		},
+		{
+			"name": "go.functions",
+			"defaultAppend": "($1)",
+			"strings": [
+				{ "string": "append", "append": "($1, $0)" },
+				"cap",
+				"close",
+				{ "string": "complex", "append": "($1, $0)" },
+				"copy",
+				{ "string": "delete", "append": "($1, $0)" },
+				"imag",
+				"len",
+				{ "string": "make", "append": "($1, $0)" },
+				"new",
+				"panic",
+				"print",
+				"println",
+				"real",
+				"recover"
+			]
+		},
+		{
+			"name": "go.keywords.builtinTypes",
+			"defaultAppend": "",
+			"strings": [
+				"any",
+				"bool",
+				"byte",
+				"comparable",
+				"complex128",
+				"complex64",
+				"error",
+				"float32",
+				"float64",
+				"int",
+				"int16",
+				"int32",
+				"int64",
+				"int8",
+				"rune",
+				"string",
+				"uint",
+				"uint16",
+				"uint32",
+				"uint64",
+				"uint8",
+				"uintptr"
+			]
+		},
+		{
+			"name": "go.keywords.userTypes",
+			"defaultAppend": "",
+			"strings": [
+				{ "string": "struct", "replace": "type ${1:name} struct {\n\t${2:members}\n}" },
+				{ "string": "interface", "replace": "type ${1:name} interface {\n\t${2:members}\n}" }
+			]
+		},
+		{
+			"name": "go.keywords.functions",
+			"defaultAppend": "",
+			"strings": [
+				"func",
+				{ "string": "func name() {}", "replace": "func ${1:name}(${2:params...}) ${3:returnType} {\n\t${4:body}\n}" },
+				{ "string": "func() {}", "replace": "func(${1:params}) ${2:returnType} {\n\t${3:body}\n}" },
+				{ "string": "go func() {}", "replace": "go func(${1:params}) ${2:returnType} {\n\t${3:body}\n}" },
+				{ "string": "func (r Receiver) name() {}", "replace": "func (${1:r} ${2:Receiver}) ${3:name}(${4:params...}) ${5:returnType} {\n\t${6:body}\n}" },
+				{ "string": "func (r *Receiver) name() {}", "replace": "func (${1:r} *${2:Receiver}) ${3:name}(${4:params...}) ${5:returnType} {\n\t${6:body}\n}" }
+			]
+		},
+		{
+			"name": "go.keywords.misc",
+			"defaultAppend": "",
+			"strings": [
+				"chan",
+				"var",
+				"package",
+				"import",
+				"go",
+				"const",
+				"defer",
+				{ "string": "map[key]value", "replace": "map[${1:keyType}]${2:valueType}" },
+				"nil"
+			]
+		}
+	],
+	
+	"contexts": [
+		{
+			"description": "Control keywords",
+			"scope": "source.go - comment - string",
+			"pattern": "(?<!\\.|\\[|\\()\\b([a-zA-Z]+)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"go.keywords.control"
+			]
+		},
+		{
+			"description": "else if keyword",
+			"scope": "source.go - comment - string",
+			"pattern": "(?<!\\.|\\[|\\()\\b(e[lse if]*)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"go.keywords.control.else-if"
+			]
+		},
+		{
+			"description": "Non-control keywords",
+			"scope": "source.go - comment - string",
+			"pattern": "(?<!\\.|\\<|\\-)\\b([a-zA-Z]+)",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"go.functions",
+				"go.keywords.builtinTypes",
+				"go.keywords.userTypes",
+				"go.keywords.functions",
+				"go.keywords.misc"
+			]
+		}
+	]
+	}
