@@ -21,10 +21,6 @@
 					"append": " href=\"$1\">$2</a>$0"
 				},
 				{
-					"string": "script",
-					"append": " src=\"$1\" type=\"text/javascript\"></script>$0"
-				},
-				{
 					"string": "form",
 					"append": " method=\"${1:post}\" action=\"$2\">$0</form>"
 				},
@@ -94,6 +90,7 @@
 				"pre",
 				"q",
 				"samp",
+				"script",
 				"select",
 				"small",
 				"strike",
