@@ -31,29 +31,29 @@ Textastic templates are simple JSON files with the following format:
   
     Always use tab characters for indentation - if necessary, Textastic will replace them with space characters depending on the current settings. 
         
-    Have a look at the [TextMate manual entry on snippets](http://manual.macromates.com/en/snippets) for an overview of the snippet syntax. Textastic supports tab stops, placeholders, mirrors and transformations. 
+    Have a look at the [TextMate manual entry on snippets](https://manual.macromates.com/en/snippets) for an overview of the snippet syntax. Textastic supports tab stops, placeholders, mirrors and transformations. 
     
     Currently, only the `$UUID` variable is supported. It automatically creates a new `uuid` and inserts it.
         
 ### Creating new templates
 
-If you want to create a new template, create a UTF-8 .json file in the *"#Textastic/Templates"* folder in Textastic and choose the template called "Template" in the "Textastic" category. 
+If you want to create a new template, create a UTF-8 .json file in the *"Local Files/#Textastic/Templates"* folder in Textastic and choose the template called "Template" in the "Textastic" category. 
 
-This will automatically create a new template file with a new `uuid`. Use the tab key to go from tab stop to tab stop and enter the necessary information. Be sure to save the template in the *"#Textastic/Templates"* folder or it will not be loaded by Textastic.
+This will automatically create a new template file with a new `uuid`. Use the tab key to go from tab stop to tab stop and enter the necessary information. Be sure to save the template in the *"Local Files/#Textastic/Templates"* folder or it will not be loaded by Textastic.
 
 *Note*: you can also manually create `uuid`s using the `uuidgen` terminal command on Mac OS X.
 
 ### Modifying existing templates
 
-If you want to modify existing templates, you can get the template files from this repository, edit them and put the modified files in the *"#Textastic/Templates"* folder. Textastic will pick up the changes immediately when you open the template selection view in the file creation dialog. 
+If you want to modify existing templates, you can get the template files from this repository, edit them and put the modified files in the *"Local Files/#Textastic/Templates"* folder. Textastic will pick up the changes immediately when you open the template selection view in the file creation dialog. 
 
-It is important that you do not change the `uuid`, so that your custom files will be used instead of the built-in ones with the same `uuid`. This behavior is the same as for custom syntax definitions as explained [in the manual](http://www.textasticapp.com/v4/manual/lessons/How_can_I_add_my_own_syntax_definitions__themes_and_templates.html).
+It is important that you do not change the `uuid`, so that your custom files will be used instead of the built-in ones with the same `uuid`. This behavior is the same as for custom syntax definitions as explained [in the manual](https://www.textasticapp.com/v10/manual/customization/custom_syntax_themes_templates.html).
 
 ## Code Completion
 
 All code completion files are located in the *CodeCompletion* subdirectory. 
 
-If you want to modify code completion definitions, you can edit them and put them in the *"#Textastic/CodeCompletion"* folder. Textastic will pick up the changes *at application startup time*, so you have to manually quit the app. If you do not change the `uuid`, your custom files will be used instead of the built-in ones. This behavior is the same as for custom syntax definitions as explained [in the manual](http://www.textasticapp.com/v4/manual/lessons/How_can_I_add_my_own_syntax_definitions__themes_and_templates.html).
+If you want to modify code completion definitions, you can edit them and put them in the *"Local Files/#Textastic/CodeCompletion"* folder. Textastic will pick up the changes *at application startup time*, so you have to manually quit the app. If you do not change the `uuid`, your custom files will be used instead of the built-in ones. This behavior is the same as for custom syntax definitions as explained [in the manual](https://www.textasticapp.com/v10/manual/customization/custom_syntax_themes_templates.html).
 
 *TODO: document file format*
 
@@ -65,4 +65,4 @@ Textastic customization files in this repository are released under the MIT lice
 
 If you want to add or modify templates or code completion files to Textastic, I happily accept pull requests. If they are useful to a broad audience, I will add them to future version of Textastic.
 
-For more contact options and the feedback forum, please visit the [Textastic website](http://www.textasticapp.com/).
+For more contact options and the feedback forum, please visit the [Textastic website](https://www.textasticapp.com/).
