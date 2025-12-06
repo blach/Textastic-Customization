@@ -1,5 +1,15 @@
 # Textastic Customization Files
 
+Creating a *#Textastic* directory in your *Local Files* in Textastic allows customization of templates, code completion, and file previews within the app.
+
+*See [the manual](https://www.textasticapp.com/v10/manual/customization/custom_syntax_themes_templates.html#add-customization-folder) for more information.*
+
+## Markdown Preview
+
+Use *markdown_head.html* to add custom HTML to the `<head>` of the Markdown preview experience for things like loading external JavaScript libraries. Use *markdown.css* to define styles to use in the Markdown preview experience.
+
+*See [the manual](https://www.textasticapp.com/v10/manual/viewing_editing_files/web_preview.html) for more information.*
+
 ## Templates
 
 Template files are located in the *Templates* subdirectory. 
